@@ -1,0 +1,32 @@
+# Extension packagée
+*.crx
+*.pem
+*.zip
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+.cache/
+
+# Fichiers de build
+dist/
+build/
+
+# Node modules (si utilisés plus tard)
+node_modules/
+
+# Fichiers IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers temporaires
+temp/
+tmp/

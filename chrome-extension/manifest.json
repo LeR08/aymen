@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Produit Winner Finder – Algérie",
+  "version": "1.0.0",
+  "description": "Analysez automatiquement les annonces Facebook Ads Library pour identifier les produits winners du e-commerce algérien",
+  "author": "Winner Finder Team",
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+
+  "host_permissions": [
+    "https://www.facebook.com/ads/library/*"
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/ads/library/*"],
+      "js": ["scripts/content.js"],
+      "css": ["styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["dashboard/dashboard.html", "icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

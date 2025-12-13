@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winner Finder – Algérie</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- En-tête -->
+    <div class="header">
+      <h1>🔥 Winner Finder</h1>
+      <p class="subtitle">Trouvez les produits gagnants d'Algérie</p>
+    </div>
+
+    <!-- État initial -->
+    <div id="initial-view" class="view active">
+      <!-- Mode de scan -->
+      <div class="mode-selector">
+        <h3>Mode de scan</h3>
+        <div class="mode-options">
+          <label class="mode-option">
+            <input type="radio" name="mode" value="quick" id="mode-quick">
+            <div class="mode-card">
+              <div class="mode-icon">⚡</div>
+              <div class="mode-title">Rapide</div>
+              <div class="mode-desc">Analyse superficielle (5-10s)</div>
+              <div class="mode-info">Données basiques uniquement</div>
+            </div>
+          </label>
+
+          <label class="mode-option">
+            <input type="radio" name="mode" value="deep" id="mode-deep" checked>
+            <div class="mode-card selected">
+              <div class="mode-icon">🎯</div>
+              <div class="mode-title">Approfondi</div>
+              <div class="mode-desc">Analyse complète (3-5min)</div>
+              <div class="mode-info">Score précis et fiable ⭐</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Statistiques -->
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-label">Annonces détectées</div>
+          <div class="stat-value" id="ads-count">-</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Temps estimé</div>
+          <div class="stat-value" id="estimated-time">-</div>
+        </div>
+      </div>
+
+      <!-- Bouton de démarrage -->
+      <button id="start-scan" class="btn-primary" disabled>
+        Démarrer l'analyse
+      </button>
+
+      <div class="info-message" id="page-check">
+        ⚠️ Ouvrez d'abord Facebook Ads Library
+      </div>
+    </div>
+
+    <!-- État de scanning -->
+    <div id="scanning-view" class="view">
+      <div class="scanning-info">
+        <div class="spinner"></div>
+        <h3 id="scanning-status">Analyse en cours...</h3>
+        <p id="scanning-details">Initialisation...</p>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-text">
+          <span id="progress-current">0</span> / <span id="progress-total">0</span> annonces
+        </div>
+      </div>
+
+      <div class="time-remaining">
+        Temps restant : <span id="time-remaining">-</span>
+      </div>
+
+      <button id="cancel-scan" class="btn-secondary">
+        Annuler
+      </button>
+    </div>
+
+    <!-- État de résultats -->
+    <div id="results-view" class="view">
+      <div class="results-header">
+        <h3>✅ Analyse terminée !</h3>
+        <p id="results-summary">-</p>
+      </div>
+
+      <!-- Top Winners -->
+      <div class="top-winners" id="top-winners">
+        <h4>🏆 Top Winners</h4>
+        <div id="winners-list"></div>
+      </div>
+
+      <!-- Actions -->
+      <div class="action-buttons">
+        <button id="view-dashboard" class="btn-primary">
+          📊 Voir tous les résultats
+        </button>
+        <button id="new-scan" class="btn-secondary">
+          🔄 Nouveau scan
+        </button>
+      </div>
+    </div>
+
+    <!-- Pied de page -->
+    <div class="footer">
+      <a href="#" id="open-dashboard">Historique des scans</a>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

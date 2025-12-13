@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Winner Finder Algérie</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app">
+    <!-- En-tête -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <h1>🔥 Winner Finder Dashboard</h1>
+          <p>Produits gagnants d'Algérie</p>
+        </div>
+        <div class="header-actions">
+          <button id="refresh-btn" class="btn-icon" title="Actualiser">
+            <span>🔄</span>
+          </button>
+          <button id="clear-btn" class="btn-icon" title="Effacer l'historique">
+            <span>🗑️</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Statistiques globales -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-icon">📊</div>
+        <div class="stat-content">
+          <div class="stat-value" id="total-scans">0</div>
+          <div class="stat-label">Scans effectués</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📈</div>
+        <div class="stat-content">
+          <div class="stat-value" id="total-ads">0</div>
+          <div class="stat-label">Annonces analysées</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-content">
+          <div class="stat-value" id="total-winners">0</div>
+          <div class="stat-label">Winners trouvés</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-content">
+          <div class="stat-value" id="avg-score">0</div>
+          <div class="stat-label">Score moyen</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sélecteur de scan -->
+    <section class="scan-selector-section">
+      <div class="section-header">
+        <h2>Sélectionner un scan</h2>
+        <div class="export-buttons">
+          <button id="export-csv" class="btn-export">📥 CSV</button>
+          <button id="export-excel" class="btn-export">📥 Excel</button>
+          <button id="export-pdf" class="btn-export">📥 PDF</button>
+        </div>
+      </div>
+
+      <div class="scan-list" id="scan-list">
+        <!-- Les scans seront injectés ici -->
+      </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="filters-section">
+      <h3>Filtrer les résultats</h3>
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label>Score minimum</label>
+          <input type="range" id="filter-score" min="0" max="100" value="0">
+          <span id="filter-score-value">0</span>
+        </div>
+
+        <div class="filter-group">
+          <label>Durée min. (jours)</label>
+          <input type="number" id="filter-duration" min="0" value="0">
+        </div>
+
+        <div class="filter-group">
+          <label>Variantes min.</label>
+          <input type="number" id="filter-variants" min="0" value="0">
+        </div>
+
+        <div class="filter-group">
+          <label>Catégorie</label>
+          <select id="filter-category">
+            <option value="all">Toutes</option>
+            <option value="Beauté & Cosmétiques">Beauté & Cosmétiques</option>
+            <option value="Mode & Vêtements">Mode & Vêtements</option>
+            <option value="Tech & Électronique">Tech & Électronique</option>
+            <option value="Maison & Décoration">Maison & Décoration</option>
+            <option value="Sport & Fitness">Sport & Fitness</option>
+            <option value="Santé & Bien-être">Santé & Bien-être</option>
+            <option value="Alimentation">Alimentation</option>
+            <option value="Services">Services</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Recherche</label>
+          <input type="text" id="filter-search" placeholder="Nom annonceur...">
+        </div>
+
+        <div class="filter-actions">
+          <button id="apply-filters" class="btn-primary-small">Appliquer</button>
+          <button id="reset-filters" class="btn-secondary-small">Réinitialiser</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tableau des résultats -->
+    <section class="results-section">
+      <div class="results-header">
+        <h3>Résultats</h3>
+        <div class="results-info">
+          <span id="results-count">0 résultat</span>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th class="sortable" data-sort="score">Score <span class="sort-icon">↕️</span></th>
+              <th class="sortable" data-sort="advertiser">Annonceur <span class="sort-icon">↕️</span></th>
+              <th class="sortable" data-sort="category">Catégorie <span class="sort-icon">↕️</span></th>
+              <th class="sortable" data-sort="duration">Durée <span class="sort-icon">↕️</span></th>
+              <th class="sortable" data-sort="variants">Variantes <span class="sort-icon">↕️</span></th>
+              <th class="sortable" data-sort="platforms">Plateformes <span class="sort-icon">↕️</span></th>
+              <th>Type</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="results-tbody">
+            <!-- Les résultats seront injectés ici -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">📭</div>
+        <h3>Aucun scan disponible</h3>
+        <p>Lancez un scan depuis Facebook Ads Library pour commencer</p>
+      </div>
+    </section>
+
+    <!-- Modal de détails -->
+    <div class="modal" id="details-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Détails de l'annonce</h3>
+          <button class="modal-close" id="modal-close">×</button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <!-- Contenu injecté dynamiquement -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
