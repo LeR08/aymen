@@ -78,7 +78,6 @@ async function handleScanComplete(data, tabId) {
   if (settings.autoNotify) {
     chrome.notifications.create({
       type: 'basic',
-      iconUrl: 'icons/icon128.png',
       title: '🔥 Scan terminé !',
       message: `${winnersCount} produit${winnersCount > 1 ? 's' : ''} winner${winnersCount > 1 ? 's' : ''} trouvé${winnersCount > 1 ? 's' : ''}`,
       priority: 2
@@ -102,7 +101,6 @@ function handleScanError(error, tabId) {
   // Notification d'erreur
   chrome.notifications.create({
     type: 'basic',
-    iconUrl: 'icons/icon128.png',
     title: '❌ Erreur de scan',
     message: error,
     priority: 2
