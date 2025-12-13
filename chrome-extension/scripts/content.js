@@ -85,8 +85,83 @@ async function startScan(mode, scanId) {
 }
 
 function getAdElements() {
-  // Facebook Ads Library utilise des pagelets pour chaque annonce
-  return Array.from(document.querySelectorAll('[data-pagelet^="AdCard"]'));
+  console.log('🔍 Recherche des annonces Facebook...');
+
+  // Plusieurs sélecteurs possibles car Facebook change souvent la structure
+  let adElements = [];
+
+  // Tentative 1 : data-pagelet AdCard (ancien format)
+  adElements = document.querySelectorAll('[data-pagelet^="AdCard"]');
+  if (adElements.length > 0) {
+    console.log(`✅ Détecté ${adElements.length} annonces avec [data-pagelet^="AdCard"]`);
+    return Array.from(adElements);
+  }
+
+  // Tentative 2 : Chercher par data-pagelet contenant "Ad"
+  adElements = document.querySelectorAll('[data-pagelet*="Ad"]');
+  if (adElements.length > 0) {
+    console.log(`✅ Détecté ${adElements.length} annonces avec [data-pagelet*="Ad"]`);
+    return Array.from(adElements);
+  }
+
+  // Tentative 3 : Chercher les éléments avec aria-label contenant des mots-clés d'annonce
+  adElements = document.querySelectorAll('[aria-label*="ad"], [aria-label*="Ad"], [aria-label*="annonce"]');
+  if (adElements.length > 5) { // Au moins 5 pour éviter les faux positifs
+    console.log(`✅ Détecté ${adElements.length} annonces avec aria-label`);
+    return Array.from(adElements);
+  }
+
+  // Tentative 4 : Chercher par texte caractéristique des annonces Facebook
+  console.log('🔍 Recherche par contenu texte...');
+  const allDivs = document.querySelectorAll('div');
+  const possibleAds = [];
+
+  allDivs.forEach(div => {
+    const text = div.textContent;
+    // Chercher des textes typiques des annonces Facebook Ads Library
+    if ((text.includes('Started running on') ||
+         text.includes('Lancé le') ||
+         text.includes('See ad details') ||
+         text.includes('Voir les détails de l\'annonce') ||
+         text.includes('Page transparency')) &&
+        div.offsetHeight > 100) { // Doit avoir une hauteur minimale
+
+      // Remonter de quelques niveaux pour avoir la carte complète
+      let parent = div;
+      for (let i = 0; i < 8; i++) {
+        if (!parent.parentElement) break;
+        parent = parent.parentElement;
+        // Si on trouve un conteneur assez grand, c'est probablement la carte
+        if (parent.offsetHeight > 200 && parent.offsetWidth > 300) {
+          possibleAds.push(parent);
+          break;
+        }
+      }
+    }
+  });
+
+  // Dédupliquer (garder uniquement les éléments uniques)
+  if (possibleAds.length > 0) {
+    const uniqueAds = [...new Set(possibleAds)];
+    console.log(`✅ Détecté ${uniqueAds.length} annonces par contenu (avant déduplication: ${possibleAds.length})`);
+    return uniqueAds;
+  }
+
+  // Tentative 5 : Chercher les cartes par structure CSS
+  adElements = document.querySelectorAll('div[class*="card"], div[class*="Card"]');
+  const adsWithDetails = Array.from(adElements).filter(el => {
+    const text = el.textContent;
+    return text.includes('See ad details') || text.includes('Voir les détails');
+  });
+
+  if (adsWithDetails.length > 0) {
+    console.log(`✅ Détecté ${adsWithDetails.length} annonces par class Card`);
+    return adsWithDetails;
+  }
+
+  console.error('❌ Aucune annonce détectée avec tous les sélecteurs');
+  console.log('📝 Structure DOM actuelle:', document.body.innerHTML.substring(0, 500));
+  return [];
 }
 
 async function scanAd(adElement, mode) {

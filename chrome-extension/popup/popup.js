@@ -83,22 +83,61 @@ function disableScan() {
 
 async function detectAds(tabId) {
   try {
-    // Injecter un script pour compter les annonces
+    // Injecter un script pour compter les annonces avec plusieurs sélecteurs
     const [result] = await chrome.scripting.executeScript({
       target: { tabId },
       func: () => {
-        const adElements = document.querySelectorAll('[data-pagelet^="AdCard"]');
-        return adElements.length;
+        // Essayer plusieurs sélecteurs
+        let count = 0;
+
+        // Tentative 1 : data-pagelet AdCard
+        let ads = document.querySelectorAll('[data-pagelet^="AdCard"]');
+        if (ads.length > 0) {
+          console.log(`Détecté ${ads.length} annonces (data-pagelet)`);
+          return ads.length;
+        }
+
+        // Tentative 2 : data-pagelet contenant "Ad"
+        ads = document.querySelectorAll('[data-pagelet*="Ad"]');
+        if (ads.length > 0) {
+          console.log(`Détecté ${ads.length} annonces (data-pagelet Ad)`);
+          return ads.length;
+        }
+
+        // Tentative 3 : Compter par texte "See ad details"
+        const allText = document.body.innerText;
+        const matches = allText.match(/See ad details|Voir les détails/g);
+        if (matches) {
+          count = matches.length;
+          console.log(`Détecté ${count} annonces (par texte)`);
+          return count;
+        }
+
+        // Tentative 4 : Compter les boutons "See ad details"
+        const detailButtons = document.querySelectorAll('[aria-label*="details"], button:contains("details")');
+        if (detailButtons.length > 0) {
+          console.log(`Détecté ${detailButtons.length} annonces (boutons)`);
+          return detailButtons.length;
+        }
+
+        console.log('Aucune annonce détectée');
+        return 0;
       }
     });
 
-    if (result && result.result) {
+    if (result && result.result !== undefined) {
       state.adsCount = result.result;
-      elements.adsCount.textContent = result.result;
+      elements.adsCount.textContent = result.result || 'Aucune';
       updateEstimatedTime();
+
+      if (result.result === 0) {
+        elements.pageCheck.textContent = '⚠️ Aucune annonce détectée. Faites défiler la page et attendez le chargement.';
+        elements.pageCheck.style.display = 'block';
+      }
     }
   } catch (error) {
     console.error('Erreur lors de la détection des annonces:', error);
+    elements.adsCount.textContent = 'Erreur';
   }
 }
 
