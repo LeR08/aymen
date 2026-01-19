@@ -1,0 +1,2586 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-18",
+  "total_quizzes": 7,
+  "quizzes": [
+    {
+      "id": "quiz_001_communication_asynchrone",
+      "theme_id": "theme_001",
+      "title": "Communication asynchrone",
+      "description": "Comprendre comment vous gérez les messages différés et les délais de réponse",
+      "category": "Communication",
+      "theme_type": "precise",
+      "difficulty": "easy",
+      "premium_level": "free",
+      "estimated_time": 5,
+      "scoring_method": "dimension_based",
+      "tags": [
+        "messages",
+        "délais",
+        "asynchrone",
+        "attente"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Quand ton/ta partenaire met du temps à répondre, tu te sens plutôt…",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Rassuré(e), je comprends qu'il/elle est occupé(e)",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "trust": 4
+              }
+            },
+            {
+              "text": "Un peu anxieux(se) mais je patiente",
+              "value": 3,
+              "dimension_score": {
+                "emotional_security": 2,
+                "trust": 3
+              }
+            },
+            {
+              "text": "Frustré(e) et je vérifie souvent mon téléphone",
+              "value": 1,
+              "dimension_score": {
+                "emotional_security": -1,
+                "trust": 1
+              }
+            },
+            {
+              "text": "Indifférent(e), je suis occupé(e) aussi",
+              "value": 4,
+              "dimension_score": {
+                "emotional_security": 3,
+                "independence": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "text": "À quelle fréquence vérifies-tu si ton/ta partenaire a lu ton message ?",
+          "type": "scale",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Jamais",
+              "value": 5
+            },
+            {
+              "text": "Rarement",
+              "value": 4
+            },
+            {
+              "text": "Parfois",
+              "value": 3
+            },
+            {
+              "text": "Souvent",
+              "value": 2
+            },
+            {
+              "text": "Tout le temps",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "text": "Quel délai de réponse te semble acceptable pour un message important ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Quelques minutes maximum",
+              "value": 2,
+              "dimension_score": {
+                "emotional_security": 1,
+                "independence": 1
+              }
+            },
+            {
+              "text": "Dans l'heure qui suit",
+              "value": 3,
+              "dimension_score": {
+                "emotional_security": 3,
+                "independence": 3
+              }
+            },
+            {
+              "text": "Dans la journée",
+              "value": 4,
+              "dimension_score": {
+                "emotional_security": 4,
+                "independence": 4
+              }
+            },
+            {
+              "text": "Quand il/elle peut, pas de pression",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "independence": 5,
+                "trust": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "text": "Quand tu envoies un message et ne reçois pas de réponse, tu penses généralement…",
+          "type": "multiple_choice",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Il/elle est probablement occupé(e)",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Il/elle a peut-être raté mon message",
+              "value": 4,
+              "dimension_score": {
+                "trust": 4,
+                "emotional_security": 3
+              }
+            },
+            {
+              "text": "Il/elle n'a peut-être pas envie de me parler",
+              "value": 2,
+              "dimension_score": {
+                "trust": 1,
+                "emotional_security": -1
+              }
+            },
+            {
+              "text": "Il/elle m'ignore volontairement",
+              "value": 1,
+              "dimension_score": {
+                "trust": -2,
+                "emotional_security": -2
+              }
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "text": "Préfères-tu recevoir un message court rapidement ou un long message plus tard ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Message court rapidement",
+              "value": 3,
+              "dimension_score": {
+                "emotional_security": 3,
+                "communication": 3
+              }
+            },
+            {
+              "text": "Long message plus tard",
+              "value": 4,
+              "dimension_score": {
+                "communication": 5,
+                "independence": 4
+              }
+            },
+            {
+              "text": "Ça dépend du contexte",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "emotional_security": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "text": "Comment gères-tu le fait de voir ton/ta partenaire 'en ligne' mais sans répondre ?",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Je ne fais pas attention à ce statut",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "trust": 5
+              }
+            },
+            {
+              "text": "Je remarque mais j'attends patiemment",
+              "value": 4,
+              "dimension_score": {
+                "emotional_security": 3,
+                "trust": 4
+              }
+            },
+            {
+              "text": "Ça me perturbe un peu",
+              "value": 2,
+              "dimension_score": {
+                "emotional_security": 1,
+                "trust": 2
+              }
+            },
+            {
+              "text": "Ça m'angoisse beaucoup",
+              "value": 1,
+              "dimension_score": {
+                "emotional_security": -2,
+                "trust": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "text": "Combien de fois par jour vous écrivez-vous en moyenne ?",
+          "type": "scale",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "1-5 messages",
+              "value": 2
+            },
+            {
+              "text": "5-20 messages",
+              "value": 3
+            },
+            {
+              "text": "20-50 messages",
+              "value": 4
+            },
+            {
+              "text": "Plus de 50 messages",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "text": "Envoies-tu parfois plusieurs messages d'affilée sans attendre de réponse ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Oui, souvent, je partage mes pensées au fur et à mesure",
+              "value": 4,
+              "dimension_score": {
+                "communication": 4,
+                "intimacy": 4
+              }
+            },
+            {
+              "text": "Parfois, selon mon humeur",
+              "value": 3,
+              "dimension_score": {
+                "communication": 3
+              }
+            },
+            {
+              "text": "Rarement, je préfère attendre une réponse",
+              "value": 2,
+              "dimension_score": {
+                "communication": 2,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Jamais, un message à la fois",
+              "value": 3,
+              "dimension_score": {
+                "communication": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "text": "Quand tu es vraiment occupé(e), comment préviens-tu ton/ta partenaire ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "J'envoie un message rapide pour expliquer",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Je réponds brièvement quand je peux",
+              "value": 4,
+              "dimension_score": {
+                "communication": 4,
+                "emotional_security": 3
+              }
+            },
+            {
+              "text": "Je réponds plus tard sans prévenir",
+              "value": 2,
+              "dimension_score": {
+                "communication": 2,
+                "emotional_security": 1
+              }
+            },
+            {
+              "text": "Il/elle sait que je suis occupé(e), pas besoin de dire",
+              "value": 3,
+              "dimension_score": {
+                "communication": 3,
+                "trust": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "text": "La communication asynchrone renforce ou affaiblit votre lien ?",
+          "type": "scale",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Renforce beaucoup",
+              "value": 5
+            },
+            {
+              "text": "Renforce un peu",
+              "value": 4
+            },
+            {
+              "text": "N'a pas d'impact",
+              "value": 3
+            },
+            {
+              "text": "Affaiblit un peu",
+              "value": 2
+            },
+            {
+              "text": "Affaiblit beaucoup",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quiz_002_jalousie_distance",
+      "theme_id": "theme_018",
+      "title": "Jalousie à distance",
+      "description": "Gérer les sentiments de jalousie quand on est loin",
+      "category": "Intimité & Émotions",
+      "theme_type": "precise",
+      "difficulty": "medium",
+      "premium_level": "couple",
+      "estimated_time": 8,
+      "scoring_method": "dimension_based",
+      "tags": [
+        "jalousie",
+        "confiance",
+        "insécurité",
+        "contrôle"
+      ],
+      "partner_comparison": true,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "À quelle fréquence ressens-tu de la jalousie dans ta relation à distance ?",
+          "type": "scale",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Jamais",
+              "value": 5
+            },
+            {
+              "text": "Rarement",
+              "value": 4
+            },
+            {
+              "text": "Parfois",
+              "value": 3
+            },
+            {
+              "text": "Souvent",
+              "value": 2
+            },
+            {
+              "text": "Très souvent",
+              "value": 1
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q2",
+          "text": "Quand ton/ta partenaire sort avec des ami(e)s, tu te sens…",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Content(e) qu'il/elle profite",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Un peu inquiet(ète) mais je gère",
+              "value": 3,
+              "dimension_score": {
+                "trust": 3,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Jaloux(se) et mal à l'aise",
+              "value": 1,
+              "dimension_score": {
+                "trust": 1,
+                "emotional_security": -1
+              }
+            },
+            {
+              "text": "Indifférent(e), chacun sa vie",
+              "value": 4,
+              "dimension_score": {
+                "trust": 4,
+                "independence": 5
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q3",
+          "text": "As-tu déjà vérifié les réseaux sociaux de ton/ta partenaire par jalousie ?",
+          "type": "multiple_choice",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Jamais, je fais totalement confiance",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Une ou deux fois, par curiosité",
+              "value": 3,
+              "dimension_score": {
+                "trust": 3,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Parfois, quand je me sens insécure",
+              "value": 2,
+              "dimension_score": {
+                "trust": 1,
+                "emotional_security": 0
+              }
+            },
+            {
+              "text": "Régulièrement, j'ai besoin d'être rassuré(e)",
+              "value": 1,
+              "dimension_score": {
+                "trust": -1,
+                "emotional_security": -2
+              }
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "text": "Comment réagis-tu si ton/ta partenaire parle d'un(e) ami(e) proche du sexe opposé ?",
+          "type": "multiple_choice",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Ça ne me pose aucun problème",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Je suis curieux(se) mais confiant(e)",
+              "value": 4,
+              "dimension_score": {
+                "trust": 4,
+                "emotional_security": 3
+              }
+            },
+            {
+              "text": "Ça me rend un peu jaloux(se)",
+              "value": 2,
+              "dimension_score": {
+                "trust": 2,
+                "emotional_security": 1
+              }
+            },
+            {
+              "text": "Ça me dérange vraiment",
+              "value": 1,
+              "dimension_score": {
+                "trust": 0,
+                "emotional_security": -1
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q5",
+          "text": "Demandes-tu parfois à ton/ta partenaire avec qui il/elle est ou ce qu'il/elle fait ?",
+          "type": "multiple_choice",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Non, il/elle partage naturellement",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "Parfois, par simple intérêt",
+              "value": 4,
+              "dimension_score": {
+                "trust": 4,
+                "communication": 4
+              }
+            },
+            {
+              "text": "Souvent, j'ai besoin de savoir",
+              "value": 2,
+              "dimension_score": {
+                "trust": 2,
+                "emotional_security": 1
+              }
+            },
+            {
+              "text": "Constamment, sinon je m'inquiète",
+              "value": 1,
+              "dimension_score": {
+                "trust": 0,
+                "emotional_security": -1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "text": "Quelle est ta plus grande peur concernant la distance et la jalousie ?",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Je n'ai pas vraiment de peur",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Que mon/ma partenaire rencontre quelqu'un d'autre",
+              "value": 1,
+              "dimension_score": {
+                "trust": 1,
+                "emotional_security": -1
+              }
+            },
+            {
+              "text": "Que je devienne trop jaloux(se) et toxique",
+              "value": 3,
+              "dimension_score": {
+                "trust": 3,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Que la jalousie détruise notre relation",
+              "value": 2,
+              "dimension_score": {
+                "trust": 2,
+                "emotional_security": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "text": "Comment ton/ta partenaire gère-t-il/elle ta jalousie ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Avec patience et réassurance",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "En me donnant des preuves de confiance",
+              "value": 4,
+              "dimension_score": {
+                "communication": 4,
+                "trust": 3
+              }
+            },
+            {
+              "text": "Avec agacement parfois",
+              "value": 2,
+              "dimension_score": {
+                "communication": 2,
+                "conflict_resolution": 2
+              }
+            },
+            {
+              "text": "Il/elle ne comprend pas ma jalousie",
+              "value": 1,
+              "dimension_score": {
+                "communication": 1,
+                "emotional_security": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "text": "Penses-tu que ta jalousie est justifiée ou excessive ?",
+          "type": "scale",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Totalement justifiée",
+              "value": 1
+            },
+            {
+              "text": "Plutôt justifiée",
+              "value": 2
+            },
+            {
+              "text": "Entre les deux",
+              "value": 3
+            },
+            {
+              "text": "Plutôt excessive",
+              "value": 4
+            },
+            {
+              "text": "Totalement excessive",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "text": "As-tu déjà exprimé ta jalousie de manière constructive ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Oui, on en parle ouvertement",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "trust": 5
+              }
+            },
+            {
+              "text": "Parfois, mais c'est difficile",
+              "value": 3,
+              "dimension_score": {
+                "communication": 3,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Rarement, je garde ça pour moi",
+              "value": 2,
+              "dimension_score": {
+                "communication": 1,
+                "emotional_security": 1
+              }
+            },
+            {
+              "text": "Non, ça finit souvent en dispute",
+              "value": 1,
+              "dimension_score": {
+                "communication": 0,
+                "conflict_resolution": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "text": "Selon toi, la jalousie dans votre relation…",
+          "type": "multiple_choice",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "N'existe presque pas",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Est normale et gérable",
+              "value": 4,
+              "dimension_score": {
+                "trust": 4,
+                "emotional_security": 3
+              }
+            },
+            {
+              "text": "Pose parfois problème",
+              "value": 2,
+              "dimension_score": {
+                "trust": 2,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Est un problème majeur",
+              "value": 1,
+              "dimension_score": {
+                "trust": 1,
+                "emotional_security": 0
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q11",
+          "text": "Que fais-tu quand tu ressens de la jalousie ?",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "J'en parle immédiatement à mon/ma partenaire",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "trust": 4
+              }
+            },
+            {
+              "text": "J'attends de me calmer puis j'en parle",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Je l'intériorise et j'essaie de passer à autre chose",
+              "value": 2,
+              "dimension_score": {
+                "communication": 1,
+                "emotional_security": 1
+              }
+            },
+            {
+              "text": "Je deviens distant(e) ou froid(e)",
+              "value": 1,
+              "dimension_score": {
+                "communication": 0,
+                "conflict_resolution": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "text": "La distance amplifie-t-elle ta jalousie comparé à une relation en proximité ?",
+          "type": "scale",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Beaucoup moins jaloux(se)",
+              "value": 5
+            },
+            {
+              "text": "Un peu moins",
+              "value": 4
+            },
+            {
+              "text": "Pareil",
+              "value": 3
+            },
+            {
+              "text": "Un peu plus",
+              "value": 2
+            },
+            {
+              "text": "Beaucoup plus",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quiz_003_qui_est_le_plus",
+      "theme_id": "theme_076",
+      "title": "Qui est le plus... ?",
+      "description": "Quiz léger pour découvrir qui est le plus [adjectif]",
+      "category": "Fun & Légèreté",
+      "theme_type": "fun",
+      "difficulty": "easy",
+      "premium_level": "free",
+      "estimated_time": 5,
+      "scoring_method": "fun",
+      "tags": [
+        "fun",
+        "jeu",
+        "comparaison",
+        "humour"
+      ],
+      "partner_comparison": true,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Qui est le plus romantique ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi",
+              "value": 1
+            },
+            {
+              "text": "Mon/ma partenaire",
+              "value": 2
+            },
+            {
+              "text": "Autant l'un que l'autre",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q2",
+          "text": "Qui dit 'Je t'aime' en premier ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Toujours moi",
+              "value": 1
+            },
+            {
+              "text": "Toujours lui/elle",
+              "value": 2
+            },
+            {
+              "text": "Ça varie",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q3",
+          "text": "Qui est le plus jaloux(se) ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi",
+              "value": 1
+            },
+            {
+              "text": "Mon/ma partenaire",
+              "value": 2
+            },
+            {
+              "text": "Aucun des deux",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q4",
+          "text": "Qui envoie le plus de messages ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Clairement moi",
+              "value": 1
+            },
+            {
+              "text": "Clairement lui/elle",
+              "value": 2
+            },
+            {
+              "text": "À peu près pareil",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q5",
+          "text": "Qui est le plus patient(e) ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi",
+              "value": 1
+            },
+            {
+              "text": "Mon/ma partenaire",
+              "value": 2
+            },
+            {
+              "text": "Ça dépend des situations",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q6",
+          "text": "Qui est le plus organisé(e) ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi, sans hésiter",
+              "value": 1
+            },
+            {
+              "text": "Lui/elle, c'est clair",
+              "value": 2
+            },
+            {
+              "text": "On est tous les deux désorganisés",
+              "value": 3
+            },
+            {
+              "text": "On est tous les deux très organisés",
+              "value": 4
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q7",
+          "text": "Qui planifie les appels vidéo ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Toujours moi",
+              "value": 1
+            },
+            {
+              "text": "Toujours lui/elle",
+              "value": 2
+            },
+            {
+              "text": "C'est spontané",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q8",
+          "text": "Qui est le plus bavard(e) pendant les appels ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi, je parle beaucoup",
+              "value": 1
+            },
+            {
+              "text": "Lui/elle, clairement",
+              "value": 2
+            },
+            {
+              "text": "On parle autant tous les deux",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q9",
+          "text": "Qui s'endort en premier pendant les appels du soir ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Toujours moi",
+              "value": 1
+            },
+            {
+              "text": "Toujours lui/elle",
+              "value": 2
+            },
+            {
+              "text": "Ça varie",
+              "value": 3
+            },
+            {
+              "text": "On ne s'endort jamais en appel",
+              "value": 4
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q10",
+          "text": "Qui a le plus peur que la relation ne fonctionne pas ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi, je l'admets",
+              "value": 1
+            },
+            {
+              "text": "Lui/elle, je le sens",
+              "value": 2
+            },
+            {
+              "text": "On est tous les deux confiants",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q11",
+          "text": "Qui cuisine le mieux ? (ou cuisinerait le mieux ensemble)",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi, sans débat",
+              "value": 1
+            },
+            {
+              "text": "Lui/elle, évidemment",
+              "value": 2
+            },
+            {
+              "text": "On est tous les deux nuls",
+              "value": 3
+            },
+            {
+              "text": "On est tous les deux bons",
+              "value": 4
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q12",
+          "text": "Qui est le plus têtu(e) ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi, je l'avoue",
+              "value": 1
+            },
+            {
+              "text": "Lui/elle, définitivement",
+              "value": 2
+            },
+            {
+              "text": "On est aussi têtus l'un que l'autre",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        }
+      ]
+    },
+    {
+      "id": "quiz_004_langages_amour",
+      "theme_id": "theme_037",
+      "title": "Vos langages de l'amour",
+      "description": "Découvrir vos langages d'amour principaux",
+      "category": "Psychologie",
+      "theme_type": "precise",
+      "difficulty": "medium",
+      "premium_level": "couple",
+      "estimated_time": 10,
+      "scoring_method": "dimension_based",
+      "tags": [
+        "langages",
+        "amour",
+        "réception",
+        "expression"
+      ],
+      "partner_comparison": true,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Qu'est-ce qui te fait le plus sentir aimé(e) à distance ?",
+          "type": "multiple_choice",
+          "dimension": "intimacy",
+          "answers": [
+            {
+              "text": "Des mots doux et des compliments",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 5,
+                "communication": 4
+              }
+            },
+            {
+              "text": "Du temps de qualité en appel vidéo",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Des cadeaux ou surprises envoyés par la poste",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 4,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Des services rendus ou de l'aide concrète",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 4,
+                "trust": 5
+              }
+            },
+            {
+              "text": "Le manque de toucher physique me rend difficile de me sentir aimé(e)",
+              "value": 2,
+              "dimension_score": {
+                "intimacy": 2,
+                "emotional_security": 1
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q2",
+          "text": "Comment préfères-tu exprimer ton amour à distance ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Par des messages affectueux et des mots",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "intimacy": 4
+              }
+            },
+            {
+              "text": "En passant beaucoup de temps ensemble virtuellement",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "En envoyant des cadeaux ou en faisant des surprises",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 4,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "En aidant et en rendant service",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "communication": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "text": "Quand ton/ta partenaire te dit 'Je t'aime', ça compte autant que des actions ?",
+          "type": "scale",
+          "dimension": "intimacy",
+          "answers": [
+            {
+              "text": "Les mots comptent plus",
+              "value": 5
+            },
+            {
+              "text": "Les mots comptent beaucoup",
+              "value": 4
+            },
+            {
+              "text": "Autant l'un que l'autre",
+              "value": 3
+            },
+            {
+              "text": "Les actions comptent plus",
+              "value": 2
+            },
+            {
+              "text": "Seules les actions comptent vraiment",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "text": "Préfères-tu un long message réfléchi ou un appel vidéo de qualité ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Un long message réfléchi",
+              "value": 4,
+              "dimension_score": {
+                "communication": 5,
+                "intimacy": 4
+              }
+            },
+            {
+              "text": "Un appel vidéo de qualité",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Les deux sont importants",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "intimacy": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "text": "Quand tu reçois un cadeau de ton/ta partenaire, tu penses surtout…",
+          "type": "multiple_choice",
+          "dimension": "intimacy",
+          "answers": [
+            {
+              "text": "Au temps et à l'attention portés à le choisir",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "À l'objet lui-même et son utilité",
+              "value": 3,
+              "dimension_score": {
+                "intimacy": 3
+              }
+            },
+            {
+              "text": "À la surprise et à l'intention",
+              "value": 4,
+              "dimension_score": {
+                "intimacy": 4,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Je ne suis pas très 'cadeaux'",
+              "value": 2,
+              "dimension_score": {
+                "intimacy": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "text": "Qu'est-ce qui compte le plus pour toi pendant un appel vidéo ?",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Que mon/ma partenaire soit pleinement présent(e) et attentif(ve)",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "Qu'on se dise des choses importantes",
+              "value": 4,
+              "dimension_score": {
+                "communication": 5,
+                "intimacy": 4
+              }
+            },
+            {
+              "text": "Qu'on fasse des activités ensemble (manger, regarder un film)",
+              "value": 4,
+              "dimension_score": {
+                "fun_connection": 5,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Peu importe, tant qu'on est ensemble",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "intimacy": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "text": "Si ton/ta partenaire oublie ton anniversaire mais t'appelle tous les jours, tu ressens…",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Beaucoup de peine, les gestes comptent",
+              "value": 2,
+              "dimension_score": {
+                "emotional_security": 1,
+                "intimacy": 2
+              }
+            },
+            {
+              "text": "Un peu déçu(e) mais ce n'est pas grave",
+              "value": 4,
+              "dimension_score": {
+                "emotional_security": 4,
+                "trust": 4
+              }
+            },
+            {
+              "text": "Rien de spécial, les anniversaires ne sont pas importants",
+              "value": 3,
+              "dimension_score": {
+                "independence": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "text": "Combien de temps de qualité par semaine as-tu besoin avec ton/ta partenaire ?",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Quelques heures suffisent",
+              "value": 3,
+              "dimension_score": {
+                "independence": 4,
+                "emotional_security": 3
+              }
+            },
+            {
+              "text": "Plusieurs heures par jour",
+              "value": 4,
+              "dimension_score": {
+                "emotional_security": 5,
+                "communication": 4
+              }
+            },
+            {
+              "text": "Le maximum possible",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "intimacy": 5
+              }
+            },
+            {
+              "text": "Ça dépend de nos emplois du temps",
+              "value": 4,
+              "dimension_score": {
+                "independence": 4,
+                "future_planning": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "text": "Ton/ta partenaire t'aide à résoudre un problème technique à distance, tu te sens…",
+          "type": "multiple_choice",
+          "dimension": "trust",
+          "answers": [
+            {
+              "text": "Très aimé(e), c'est important pour moi",
+              "value": 5,
+              "dimension_score": {
+                "trust": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "Reconnaissant(e) mais pas spécialement aimé(e)",
+              "value": 3,
+              "dimension_score": {
+                "trust": 3
+              }
+            },
+            {
+              "text": "Neutre, c'est normal de s'entraider",
+              "value": 3,
+              "dimension_score": {
+                "trust": 3,
+                "independence": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "text": "Vos langages d'amour sont-ils compatibles ?",
+          "type": "scale",
+          "dimension": "intimacy",
+          "answers": [
+            {
+              "text": "Très différents et ça pose problème",
+              "value": 1
+            },
+            {
+              "text": "Différents mais on s'adapte",
+              "value": 3
+            },
+            {
+              "text": "Assez similaires",
+              "value": 4
+            },
+            {
+              "text": "Très compatibles",
+              "value": 5
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q11",
+          "text": "Qu'est-ce qui te manque le plus à cause de la distance ?",
+          "type": "multiple_choice",
+          "dimension": "intimacy",
+          "answers": [
+            {
+              "text": "Le contact physique (câlins, baisers)",
+              "value": 5,
+              "dimension_score": {
+                "intimacy": 5,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Passer du temps de qualité en personne",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "intimacy": 4
+              }
+            },
+            {
+              "text": "Faire des activités ensemble physiquement",
+              "value": 4,
+              "dimension_score": {
+                "fun_connection": 5,
+                "intimacy": 3
+              }
+            },
+            {
+              "text": "Les petites attentions du quotidien",
+              "value": 4,
+              "dimension_score": {
+                "intimacy": 4,
+                "emotional_security": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "text": "Ton/ta partenaire annule un appel prévu, mais t'envoie un long message. Tu ressens…",
+          "type": "multiple_choice",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "De la déception, je voulais le voir/la voir",
+              "value": 2,
+              "dimension_score": {
+                "emotional_security": 2,
+                "communication": 3
+              }
+            },
+            {
+              "text": "C'est ok, le message compense",
+              "value": 4,
+              "dimension_score": {
+                "emotional_security": 4,
+                "communication": 5
+              }
+            },
+            {
+              "text": "De la frustration, un message ne remplace pas un appel",
+              "value": 1,
+              "dimension_score": {
+                "emotional_security": 1,
+                "communication": 2
+              }
+            },
+            {
+              "text": "Compréhension, la vie arrive",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "trust": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quiz_005_fuseaux_horaires",
+      "theme_id": "theme_046",
+      "title": "Gestion des fuseaux horaires",
+      "description": "Optimiser votre temps malgré le décalage horaire",
+      "category": "Distance & Organisation",
+      "theme_type": "precise",
+      "difficulty": "medium",
+      "premium_level": "solo",
+      "estimated_time": 7,
+      "scoring_method": "dimension_based",
+      "tags": [
+        "fuseau",
+        "horaire",
+        "planification",
+        "synchronisation"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Quel est votre décalage horaire ?",
+          "type": "multiple_choice",
+          "dimension": "future_planning",
+          "answers": [
+            {
+              "text": "Pas de décalage ou 1-2h",
+              "value": 5
+            },
+            {
+              "text": "3-5 heures",
+              "value": 3
+            },
+            {
+              "text": "6-8 heures",
+              "value": 2
+            },
+            {
+              "text": "Plus de 9 heures",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "text": "Comment le décalage horaire affecte-t-il votre communication ?",
+          "type": "scale",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Aucun impact",
+              "value": 5
+            },
+            {
+              "text": "Impact mineur",
+              "value": 4
+            },
+            {
+              "text": "Impact modéré",
+              "value": 3
+            },
+            {
+              "text": "Impact important",
+              "value": 2
+            },
+            {
+              "text": "Impact majeur",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "text": "Qui fait le plus de compromis d'horaires ?",
+          "type": "multiple_choice",
+          "dimension": "future_planning",
+          "answers": [
+            {
+              "text": "Moi, je m'adapte beaucoup",
+              "value": 3,
+              "dimension_score": {
+                "future_planning": 3,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Mon/ma partenaire surtout",
+              "value": 3,
+              "dimension_score": {
+                "future_planning": 3,
+                "trust": 4
+              }
+            },
+            {
+              "text": "On alterne de façon équitable",
+              "value": 5,
+              "dimension_score": {
+                "future_planning": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "Personne ne fait vraiment de compromis",
+              "value": 1,
+              "dimension_score": {
+                "future_planning": 1,
+                "communication": 1
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q4",
+          "text": "À quelle fréquence modifies-tu ton rythme de sommeil pour communiquer ?",
+          "type": "scale",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Jamais",
+              "value": 1
+            },
+            {
+              "text": "Rarement",
+              "value": 2
+            },
+            {
+              "text": "Parfois",
+              "value": 3
+            },
+            {
+              "text": "Souvent",
+              "value": 4
+            },
+            {
+              "text": "Très souvent",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "text": "Comment planifiez-vous vos appels malgré le décalage ?",
+          "type": "multiple_choice",
+          "dimension": "future_planning",
+          "answers": [
+            {
+              "text": "On a des créneaux fixes chaque semaine",
+              "value": 5,
+              "dimension_score": {
+                "future_planning": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "On s'adapte au jour le jour",
+              "value": 3,
+              "dimension_score": {
+                "future_planning": 3,
+                "independence": 4
+              }
+            },
+            {
+              "text": "C'est souvent improvisé et compliqué",
+              "value": 2,
+              "dimension_score": {
+                "future_planning": 2,
+                "communication": 2
+              }
+            },
+            {
+              "text": "On utilise des outils de planification (calendrier partagé, etc.)",
+              "value": 5,
+              "dimension_score": {
+                "future_planning": 5,
+                "communication": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "text": "Le décalage horaire a-t-il déjà causé des frustrations ou disputes ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Jamais, on gère bien",
+              "value": 5,
+              "dimension_score": {
+                "conflict_resolution": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "Rarement, quelques petites tensions",
+              "value": 4,
+              "dimension_score": {
+                "conflict_resolution": 4,
+                "communication": 4
+              }
+            },
+            {
+              "text": "Parfois, c'est une source de stress",
+              "value": 2,
+              "dimension_score": {
+                "conflict_resolution": 2,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Souvent, c'est un problème récurrent",
+              "value": 1,
+              "dimension_score": {
+                "conflict_resolution": 1,
+                "emotional_security": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "text": "Ressens-tu de la frustration quand ton/ta partenaire dort pendant que tu es éveillé(e) ?",
+          "type": "scale",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Jamais, c'est normal",
+              "value": 5
+            },
+            {
+              "text": "Rarement",
+              "value": 4
+            },
+            {
+              "text": "Parfois",
+              "value": 3
+            },
+            {
+              "text": "Souvent",
+              "value": 2
+            },
+            {
+              "text": "Très souvent",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "text": "Comment gérez-vous les week-ends et jours de repos avec le décalage ?",
+          "type": "multiple_choice",
+          "dimension": "future_planning",
+          "answers": [
+            {
+              "text": "On maximise le temps ensemble, même si c'est fatigant",
+              "value": 5,
+              "dimension_score": {
+                "emotional_security": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "On trouve un équilibre entre repos et temps ensemble",
+              "value": 5,
+              "dimension_score": {
+                "future_planning": 5,
+                "independence": 4
+              }
+            },
+            {
+              "text": "Chacun profite de son week-end de son côté",
+              "value": 2,
+              "dimension_score": {
+                "independence": 5,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "C'est toujours compliqué et source de frustration",
+              "value": 1,
+              "dimension_score": {
+                "communication": 1,
+                "conflict_resolution": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "text": "Utilisez-vous des messages asynchrones pour compenser le décalage ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Oui, beaucoup, ça aide énormément",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "future_planning": 4
+              }
+            },
+            {
+              "text": "Oui, mais je préfère les appels en temps réel",
+              "value": 3,
+              "dimension_score": {
+                "communication": 3,
+                "emotional_security": 3
+              }
+            },
+            {
+              "text": "Non, on privilégie les appels synchronisés",
+              "value": 3,
+              "dimension_score": {
+                "communication": 4,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Non, et ça crée des problèmes",
+              "value": 1,
+              "dimension_score": {
+                "communication": 1,
+                "future_planning": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "text": "Le décalage horaire renforce ou affaiblit votre relation ?",
+          "type": "scale",
+          "dimension": "emotional_security",
+          "answers": [
+            {
+              "text": "Renforce beaucoup",
+              "value": 5
+            },
+            {
+              "text": "Renforce un peu",
+              "value": 4
+            },
+            {
+              "text": "N'a pas d'impact",
+              "value": 3
+            },
+            {
+              "text": "Affaiblit un peu",
+              "value": 2
+            },
+            {
+              "text": "Affaiblit beaucoup",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "text": "As-tu déjà envisagé que l'un de vous change de fuseau pour se rapprocher ?",
+          "type": "multiple_choice",
+          "dimension": "future_planning",
+          "answers": [
+            {
+              "text": "Oui, c'est dans nos projets",
+              "value": 5,
+              "dimension_score": {
+                "future_planning": 5,
+                "emotional_security": 5
+              }
+            },
+            {
+              "text": "On en a discuté mais rien de concret",
+              "value": 3,
+              "dimension_score": {
+                "future_planning": 3,
+                "communication": 4
+              }
+            },
+            {
+              "text": "Non, ce n'est pas envisageable pour l'instant",
+              "value": 2,
+              "dimension_score": {
+                "future_planning": 2,
+                "independence": 3
+              }
+            },
+            {
+              "text": "Non, on s'est habitués au décalage",
+              "value": 3,
+              "dimension_score": {
+                "future_planning": 3,
+                "communication": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quiz_006_conflits_distance",
+      "theme_id": "theme_061",
+      "title": "Disputes à distance",
+      "description": "Gérer les conflits sans être physiquement ensemble",
+      "category": "Conflits & Résilience",
+      "theme_type": "precise",
+      "difficulty": "medium",
+      "premium_level": "couple",
+      "estimated_time": 8,
+      "scoring_method": "dimension_based",
+      "tags": [
+        "disputes",
+        "conflits",
+        "désaccords",
+        "tension"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Comment se terminent généralement vos disputes à distance ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "On en discute calmement et on trouve une solution",
+              "value": 5,
+              "dimension_score": {
+                "conflict_resolution": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "L'un de nous s'excuse et on passe à autre chose",
+              "value": 3,
+              "dimension_score": {
+                "conflict_resolution": 3,
+                "communication": 3
+              }
+            },
+            {
+              "text": "On évite le sujet et on fait comme si de rien n'était",
+              "value": 1,
+              "dimension_score": {
+                "conflict_resolution": 1,
+                "communication": 1
+              }
+            },
+            {
+              "text": "Ça prend du temps mais on finit par se réconcilier",
+              "value": 4,
+              "dimension_score": {
+                "conflict_resolution": 4,
+                "emotional_security": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "text": "Pendant une dispute, arrives-tu à exprimer clairement tes émotions par message ?",
+          "type": "scale",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Très difficilement",
+              "value": 1
+            },
+            {
+              "text": "Difficilement",
+              "value": 2
+            },
+            {
+              "text": "Moyennement",
+              "value": 3
+            },
+            {
+              "text": "Facilement",
+              "value": 4
+            },
+            {
+              "text": "Très facilement",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "text": "Préfères-tu régler un conflit par message ou en appel ?",
+          "type": "multiple_choice",
+          "dimension": "communication",
+          "answers": [
+            {
+              "text": "Par message, j'ai le temps de réfléchir",
+              "value": 3,
+              "dimension_score": {
+                "communication": 3,
+                "conflict_resolution": 3
+              }
+            },
+            {
+              "text": "En appel, c'est plus direct et humain",
+              "value": 5,
+              "dimension_score": {
+                "communication": 5,
+                "conflict_resolution": 5
+              }
+            },
+            {
+              "text": "Ça dépend de la gravité du conflit",
+              "value": 4,
+              "dimension_score": {
+                "communication": 4,
+                "conflict_resolution": 4
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q4",
+          "text": "Combien de temps dure généralement une dispute entre vous ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Quelques minutes, on règle vite",
+              "value": 5
+            },
+            {
+              "text": "Quelques heures",
+              "value": 4
+            },
+            {
+              "text": "Un jour ou deux",
+              "value": 2
+            },
+            {
+              "text": "Plusieurs jours",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "text": "Qui fait généralement le premier pas après une dispute ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Toujours moi",
+              "value": 3,
+              "dimension_score": {
+                "conflict_resolution": 3,
+                "emotional_security": 4
+              }
+            },
+            {
+              "text": "Toujours mon/ma partenaire",
+              "value": 3,
+              "dimension_score": {
+                "conflict_resolution": 3,
+                "trust": 4
+              }
+            },
+            {
+              "text": "Ça dépend de qui a tort",
+              "value": 4,
+              "dimension_score": {
+                "conflict_resolution": 4,
+                "communication": 4
+              }
+            },
+            {
+              "text": "On fait tous les deux l'effort",
+              "value": 5,
+              "dimension_score": {
+                "conflict_resolution": 5,
+                "communication": 5
+              }
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q6",
+          "text": "La distance rend-elle les conflits plus difficiles à gérer ?",
+          "type": "scale",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Beaucoup plus facile",
+              "value": 5
+            },
+            {
+              "text": "Un peu plus facile",
+              "value": 4
+            },
+            {
+              "text": "Aucune différence",
+              "value": 3
+            },
+            {
+              "text": "Un peu plus difficile",
+              "value": 2
+            },
+            {
+              "text": "Beaucoup plus difficile",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "text": "As-tu déjà bloqué ou ignoré ton/ta partenaire après une dispute ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Jamais, on communique toujours",
+              "value": 5,
+              "dimension_score": {
+                "conflict_resolution": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "Une ou deux fois dans un moment de colère",
+              "value": 2,
+              "dimension_score": {
+                "conflict_resolution": 2,
+                "emotional_security": 2
+              }
+            },
+            {
+              "text": "Parfois, j'ai besoin de temps seul(e)",
+              "value": 3,
+              "dimension_score": {
+                "conflict_resolution": 3,
+                "independence": 4
+              }
+            },
+            {
+              "text": "Souvent, c'est ma façon de gérer",
+              "value": 1,
+              "dimension_score": {
+                "conflict_resolution": 1,
+                "communication": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "text": "Quels types de sujets causent le plus de conflits ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "La communication et le temps accordé",
+              "value": 3
+            },
+            {
+              "text": "La jalousie et la confiance",
+              "value": 2
+            },
+            {
+              "text": "Les projets d'avenir et la distance",
+              "value": 3
+            },
+            {
+              "text": "Des malentendus par messages",
+              "value": 3
+            },
+            {
+              "text": "On a rarement des conflits",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "text": "Après une dispute, avez-vous une discussion pour éviter que ça se reproduise ?",
+          "type": "multiple_choice",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Oui, toujours, on analyse ce qui s'est passé",
+              "value": 5,
+              "dimension_score": {
+                "conflict_resolution": 5,
+                "communication": 5
+              }
+            },
+            {
+              "text": "Parfois, si c'était sérieux",
+              "value": 3,
+              "dimension_score": {
+                "conflict_resolution": 3,
+                "communication": 3
+              }
+            },
+            {
+              "text": "Rarement, on préfère tourner la page",
+              "value": 2,
+              "dimension_score": {
+                "conflict_resolution": 2,
+                "communication": 2
+              }
+            },
+            {
+              "text": "Jamais, on passe à autre chose",
+              "value": 1,
+              "dimension_score": {
+                "conflict_resolution": 1,
+                "communication": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "text": "Les conflits renforcent-ils ou affaiblissent-ils votre relation ?",
+          "type": "scale",
+          "dimension": "conflict_resolution",
+          "answers": [
+            {
+              "text": "Renforcent beaucoup",
+              "value": 5
+            },
+            {
+              "text": "Renforcent un peu",
+              "value": 4
+            },
+            {
+              "text": "Aucun impact",
+              "value": 3
+            },
+            {
+              "text": "Affaiblissent un peu",
+              "value": 2
+            },
+            {
+              "text": "Affaiblissent beaucoup",
+              "value": 1
+            }
+          ],
+          "partner_comparison": true
+        }
+      ]
+    },
+    {
+      "id": "quiz_007_souvenirs_communs",
+      "theme_id": "theme_079",
+      "title": "Souvenirs communs",
+      "description": "Testez votre mémoire sur vos moments partagés",
+      "category": "Fun & Légèreté",
+      "theme_type": "fun",
+      "difficulty": "easy",
+      "premium_level": "free",
+      "estimated_time": 6,
+      "scoring_method": "fun",
+      "tags": [
+        "souvenirs",
+        "mémoire",
+        "passé",
+        "nostalgie"
+      ],
+      "partner_comparison": true,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Où vous êtes-vous rencontrés ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "En ligne (app, réseau social, jeu)",
+              "value": 1
+            },
+            {
+              "text": "Par des amis communs",
+              "value": 2
+            },
+            {
+              "text": "Au travail/études",
+              "value": 3
+            },
+            {
+              "text": "Par hasard (voyage, événement)",
+              "value": 4
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q2",
+          "text": "Quelle est la date de votre premier message/rendez-vous ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Je m'en souviens exactement",
+              "value": 5
+            },
+            {
+              "text": "Je me souviens du mois et de l'année",
+              "value": 4
+            },
+            {
+              "text": "Je me souviens de l'année seulement",
+              "value": 3
+            },
+            {
+              "text": "Je ne m'en souviens plus vraiment",
+              "value": 1
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q3",
+          "text": "Qui a fait le premier pas ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Moi, clairement",
+              "value": 1
+            },
+            {
+              "text": "Mon/ma partenaire",
+              "value": 2
+            },
+            {
+              "text": "Difficile à dire, c'était mutuel",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q4",
+          "text": "Quel est votre premier souvenir ensemble ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Je m'en souviens très bien",
+              "value": 5
+            },
+            {
+              "text": "Je m'en souviens vaguement",
+              "value": 3
+            },
+            {
+              "text": "Je ne m'en souviens plus",
+              "value": 1
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q5",
+          "text": "Quelle a été votre première dispute ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Je me souviens exactement du sujet",
+              "value": 5
+            },
+            {
+              "text": "Je me souviens qu'on s'est disputés mais pas du sujet",
+              "value": 3
+            },
+            {
+              "text": "On ne s'est jamais vraiment disputés",
+              "value": 4
+            },
+            {
+              "text": "Je ne m'en souviens pas",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "text": "Quel est votre moment préféré ensemble jusqu'à présent ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Une visite/retrouvailles en personne",
+              "value": 5
+            },
+            {
+              "text": "Un appel vidéo spécial",
+              "value": 4
+            },
+            {
+              "text": "Un échange de messages marquant",
+              "value": 3
+            },
+            {
+              "text": "Difficile de choisir, il y en a plusieurs",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "text": "Quelle chanson vous représente le mieux en tant que couple ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "On a une chanson officielle",
+              "value": 5
+            },
+            {
+              "text": "Il y a plusieurs chansons qui nous rappellent à nous",
+              "value": 4
+            },
+            {
+              "text": "On n'a pas vraiment de chanson",
+              "value": 2
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q8",
+          "text": "Combien de fois vous êtes-vous vus en personne ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Jamais encore",
+              "value": 1
+            },
+            {
+              "text": "Une fois",
+              "value": 2
+            },
+            {
+              "text": "2-5 fois",
+              "value": 3
+            },
+            {
+              "text": "Plus de 5 fois",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "text": "Quel est le surnom que tu donnes à ton/ta partenaire ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "On a plusieurs surnoms mignons",
+              "value": 5
+            },
+            {
+              "text": "On a un surnom principal",
+              "value": 4
+            },
+            {
+              "text": "On s'appelle par nos prénoms",
+              "value": 3
+            }
+          ],
+          "partner_comparison": true
+        },
+        {
+          "id": "q10",
+          "text": "Quelle est la chose la plus folle que vous ayez faite pour être ensemble ?",
+          "type": "multiple_choice",
+          "dimension": "fun_connection",
+          "answers": [
+            {
+              "text": "Un voyage imprévu/surprise",
+              "value": 5
+            },
+            {
+              "text": "Changer nos plans pour se voir",
+              "value": 4
+            },
+            {
+              "text": "Des horaires de sommeil complètement décalés",
+              "value": 3
+            },
+            {
+              "text": "Rien de vraiment fou pour l'instant",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

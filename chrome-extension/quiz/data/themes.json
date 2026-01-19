@@ -1,0 +1,922 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-18",
+  "total_themes": 100,
+  "themes": [
+    {
+      "id": "theme_001",
+      "title": "Communication asynchrone",
+      "category": "Communication",
+      "description": "Comprendre comment vous gérez les messages différés et les délais de réponse",
+      "keywords": ["messages", "délais", "asynchrone", "attente"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_002",
+      "title": "Malentendus par message",
+      "category": "Communication",
+      "description": "Explorez comment les textos peuvent créer des incompréhensions",
+      "keywords": ["malentendus", "textos", "interprétation", "clarté"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_003",
+      "title": "Qualité des appels vidéo",
+      "category": "Communication",
+      "description": "Évaluez l'importance et la fréquence de vos appels vidéo",
+      "keywords": ["vidéo", "appels", "visuel", "présence"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_004",
+      "title": "Silences prolongés",
+      "category": "Communication",
+      "description": "Comment gérez-vous les périodes sans communication ?",
+      "keywords": ["silence", "absence", "vide", "inquiétude"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_005",
+      "title": "Différences de fuseaux horaires",
+      "category": "Communication",
+      "description": "L'impact du décalage horaire sur votre communication quotidienne",
+      "keywords": ["fuseau", "horaire", "décalage", "timing"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_006",
+      "title": "Ton des messages écrits",
+      "category": "Communication",
+      "description": "Comment interprétez-vous l'émotion derrière les mots ?",
+      "keywords": ["ton", "émotion", "texte", "perception"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_007",
+      "title": "Usage des emojis",
+      "category": "Communication",
+      "description": "Le rôle des emojis dans votre communication de couple",
+      "keywords": ["emojis", "expression", "visuel", "affection"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_008",
+      "title": "Messages vocaux vs textes",
+      "category": "Communication",
+      "description": "Préférences et efficacité des différents formats de messages",
+      "keywords": ["vocal", "audio", "texte", "préférence"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_009",
+      "title": "Fréquence des échanges",
+      "category": "Communication",
+      "description": "Trouvez votre rythme idéal de communication",
+      "keywords": ["fréquence", "rythme", "équilibre", "besoins"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_010",
+      "title": "Communication profonde vs légère",
+      "category": "Communication",
+      "description": "L'équilibre entre conversations sérieuses et légères",
+      "keywords": ["profondeur", "légèreté", "sujets", "équilibre"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_011",
+      "title": "Partage du quotidien",
+      "category": "Communication",
+      "description": "Comment partagez-vous vos moments de vie ordinaires ?",
+      "keywords": ["quotidien", "routine", "partage", "moments"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_012",
+      "title": "Gestion des conversations difficiles",
+      "category": "Communication",
+      "description": "Aborder les sujets sensibles malgré la distance",
+      "keywords": ["difficile", "sensible", "courage", "honnêteté"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_013",
+      "title": "Écoute active à distance",
+      "category": "Communication",
+      "description": "Votre capacité à vraiment écouter sans être physiquement présent",
+      "keywords": ["écoute", "attention", "présence", "compréhension"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_014",
+      "title": "Communication non-verbale virtuelle",
+      "category": "Communication",
+      "description": "Décoder les signaux non-verbaux à travers les écrans",
+      "keywords": ["non-verbal", "gestes", "expressions", "indices"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_015",
+      "title": "Transparence numérique",
+      "category": "Communication",
+      "description": "Jusqu'où partagez-vous vos activités en ligne ?",
+      "keywords": ["transparence", "vie privée", "partage", "limites"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_016",
+      "title": "Manque de contact physique",
+      "category": "Intimité & Émotions",
+      "description": "Comment compensez-vous l'absence de toucher ?",
+      "keywords": ["toucher", "physique", "manque", "compensation"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_017",
+      "title": "Besoin de réassurance émotionnelle",
+      "category": "Intimité & Émotions",
+      "description": "Votre besoin d'être rassuré(e) sur les sentiments de l'autre",
+      "keywords": ["réassurance", "sécurité", "doutes", "confirmation"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_018",
+      "title": "Jalousie à distance",
+      "category": "Intimité & Émotions",
+      "description": "Gérer les sentiments de jalousie quand on est loin",
+      "keywords": ["jalousie", "confiance", "insécurité", "contrôle"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_019",
+      "title": "Sentiment de solitude",
+      "category": "Intimité & Émotions",
+      "description": "Affronter la solitude malgré la relation",
+      "keywords": ["solitude", "isolement", "vide", "présence"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_020",
+      "title": "Moments de complicité virtuelle",
+      "category": "Intimité & Émotions",
+      "description": "Créer des instants intimes malgré la distance",
+      "keywords": ["complicité", "intimité", "moments", "connexion"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_021",
+      "title": "Maintenir la passion",
+      "category": "Intimité & Émotions",
+      "description": "Garder la flamme vivante à travers les écrans",
+      "keywords": ["passion", "désir", "excitation", "romance"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_022",
+      "title": "Désir et intimité sexuelle",
+      "category": "Intimité & Émotions",
+      "description": "Votre vie intime malgré la séparation physique",
+      "keywords": ["désir", "sexualité", "intimité", "expression"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_023",
+      "title": "Attachement émotionnel",
+      "category": "Intimité & Émotions",
+      "description": "La force de votre lien émotionnel à distance",
+      "keywords": ["attachement", "lien", "connexion", "profondeur"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_024",
+      "title": "Vulnérabilité partagée",
+      "category": "Intimité & Émotions",
+      "description": "Oser montrer vos faiblesses malgré l'écran",
+      "keywords": ["vulnérabilité", "authenticité", "ouverture", "faiblesse"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_025",
+      "title": "Rituels de connexion",
+      "category": "Intimité & Émotions",
+      "description": "Les petits rituels qui maintiennent votre proximité",
+      "keywords": ["rituels", "habitudes", "routine", "symbolique"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_026",
+      "title": "Expression de l'amour",
+      "category": "Intimité & Émotions",
+      "description": "Comment vous dites 'Je t'aime' à distance",
+      "keywords": ["amour", "expression", "mots", "gestes"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_027",
+      "title": "Peur de la perte",
+      "category": "Intimité & Émotions",
+      "description": "Gérer l'anxiété de perdre l'autre",
+      "keywords": ["peur", "abandon", "anxiété", "perte"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_028",
+      "title": "Célébrations à distance",
+      "category": "Intimité & Émotions",
+      "description": "Fêter les moments importants malgré la séparation",
+      "keywords": ["célébrations", "anniversaires", "fêtes", "occasions"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_029",
+      "title": "Soutien émotionnel mutuel",
+      "category": "Intimité & Émotions",
+      "description": "Être là l'un pour l'autre dans les moments difficiles",
+      "keywords": ["soutien", "réconfort", "présence", "aide"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_030",
+      "title": "Rêves et projections communes",
+      "category": "Intimité & Émotions",
+      "description": "Partager vos rêves pour renforcer le lien",
+      "keywords": ["rêves", "futur", "imagination", "espoir"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_031",
+      "title": "Style d'attachement",
+      "category": "Psychologie",
+      "description": "Comprendre votre style d'attachement en relation à distance",
+      "keywords": ["attachement", "sécurité", "anxiété", "évitement"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_032",
+      "title": "Gestion du stress relationnel",
+      "category": "Psychologie",
+      "description": "Comment vous gérez le stress lié à la distance",
+      "keywords": ["stress", "anxiété", "coping", "gestion"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_033",
+      "title": "Besoin d'indépendance",
+      "category": "Psychologie",
+      "description": "L'équilibre entre autonomie et relation",
+      "keywords": ["indépendance", "autonomie", "espace", "liberté"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_034",
+      "title": "Besoin de sécurité affective",
+      "category": "Psychologie",
+      "description": "Votre besoin de stabilité et de prévisibilité",
+      "keywords": ["sécurité", "stabilité", "prévisibilité", "confiance"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_035",
+      "title": "Réactions aux conflits",
+      "category": "Psychologie",
+      "description": "Votre pattern de réaction face aux désaccords",
+      "keywords": ["conflits", "réaction", "défense", "pattern"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_036",
+      "title": "Différences émotionnelles",
+      "category": "Psychologie",
+      "description": "Comprendre vos différences dans l'expression émotionnelle",
+      "keywords": ["émotions", "différences", "expression", "tempérament"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_037",
+      "title": "Langages de l'amour",
+      "category": "Psychologie",
+      "description": "Découvrir vos langages d'amour principaux",
+      "keywords": ["langages", "amour", "réception", "expression"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_038",
+      "title": "Introversion vs Extraversion",
+      "category": "Psychologie",
+      "description": "Impact de vos personnalités sur la relation à distance",
+      "keywords": ["introversion", "extraversion", "énergie", "social"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_039",
+      "title": "Résilience relationnelle",
+      "category": "Psychologie",
+      "description": "Votre capacité à rebondir face aux défis",
+      "keywords": ["résilience", "force", "adaptation", "rebond"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_040",
+      "title": "Estime de soi dans la relation",
+      "category": "Psychologie",
+      "description": "Comment la relation affecte votre confiance en vous",
+      "keywords": ["estime", "confiance", "valeur", "image"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_041",
+      "title": "Peurs et insécurités personnelles",
+      "category": "Psychologie",
+      "description": "Les peurs qui influencent votre relation",
+      "keywords": ["peurs", "insécurités", "anxiétés", "blocages"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_042",
+      "title": "Besoins affectifs non comblés",
+      "category": "Psychologie",
+      "description": "Identifier ce qui vous manque émotionnellement",
+      "keywords": ["besoins", "manques", "carences", "attentes"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_043",
+      "title": "Personnalité et compatibilité",
+      "category": "Psychologie",
+      "description": "Évaluer votre compatibilité psychologique",
+      "keywords": ["compatibilité", "personnalité", "affinités", "différences"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_044",
+      "title": "Intelligence émotionnelle",
+      "category": "Psychologie",
+      "description": "Votre capacité à gérer les émotions à distance",
+      "keywords": ["intelligence", "émotionnelle", "gestion", "conscience"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_045",
+      "title": "Croyances sur l'amour",
+      "category": "Psychologie",
+      "description": "Vos convictions profondes sur l'amour et le couple",
+      "keywords": ["croyances", "valeurs", "vision", "amour"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_046",
+      "title": "Gestion des fuseaux horaires",
+      "category": "Distance & Organisation",
+      "description": "Optimiser votre temps malgré le décalage horaire",
+      "keywords": ["fuseau", "horaire", "planification", "synchronisation"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_047",
+      "title": "Planification des retrouvailles",
+      "category": "Distance & Organisation",
+      "description": "Comment vous organisez vos rencontres physiques",
+      "keywords": ["retrouvailles", "visites", "planification", "anticipation"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_048",
+      "title": "Rythme de vie différent",
+      "category": "Distance & Organisation",
+      "description": "S'adapter aux différentes routines quotidiennes",
+      "keywords": ["rythme", "routine", "adaptation", "flexibilité"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_049",
+      "title": "Projets communs à distance",
+      "category": "Distance & Organisation",
+      "description": "Construire ensemble malgré la séparation",
+      "keywords": ["projets", "collaboration", "objectifs", "création"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_050",
+      "title": "Incertitude du futur ensemble",
+      "category": "Distance & Organisation",
+      "description": "Gérer l'incertitude sur votre avenir commun",
+      "keywords": ["incertitude", "futur", "plans", "anxiété"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_051",
+      "title": "Priorités personnelles vs couple",
+      "category": "Distance & Organisation",
+      "description": "L'équilibre entre vos objectifs et la relation",
+      "keywords": ["priorités", "équilibre", "carrière", "couple"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_052",
+      "title": "Objectifs de couple à long terme",
+      "category": "Distance & Organisation",
+      "description": "Vos visions pour l'avenir de votre relation",
+      "keywords": ["objectifs", "futur", "vision", "plans"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_053",
+      "title": "Finances et distance",
+      "category": "Distance & Organisation",
+      "description": "Gérer les aspects financiers de la distance",
+      "keywords": ["finances", "argent", "coûts", "voyages"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_054",
+      "title": "Durée de la distance",
+      "category": "Distance & Organisation",
+      "description": "Comment la durée affecte votre relation",
+      "keywords": ["durée", "temps", "patience", "endurance"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_055",
+      "title": "Plan de rapprochement",
+      "category": "Distance & Organisation",
+      "description": "Votre stratégie pour mettre fin à la distance",
+      "keywords": ["rapprochement", "plan", "déménagement", "transition"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_056",
+      "title": "Équilibre travail-relation",
+      "category": "Distance & Organisation",
+      "description": "Jongler entre carrière et temps pour le couple",
+      "keywords": ["travail", "équilibre", "temps", "priorités"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_057",
+      "title": "Organisation des visites",
+      "category": "Distance & Organisation",
+      "description": "Optimiser le temps passé ensemble physiquement",
+      "keywords": ["visites", "organisation", "qualité", "temps"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_058",
+      "title": "Soutien des proches",
+      "category": "Distance & Organisation",
+      "description": "Le rôle de votre entourage dans votre relation",
+      "keywords": ["famille", "amis", "soutien", "entourage"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_059",
+      "title": "Activités partagées virtuellement",
+      "category": "Distance & Organisation",
+      "description": "Ce que vous faites ensemble à travers les écrans",
+      "keywords": ["activités", "partage", "virtuel", "ensemble"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_060",
+      "title": "Documentation de la relation",
+      "category": "Distance & Organisation",
+      "description": "Comment vous gardez une trace de votre histoire",
+      "keywords": ["souvenirs", "photos", "documentation", "mémoire"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_061",
+      "title": "Disputes à distance",
+      "category": "Conflits & Résilience",
+      "description": "Gérer les conflits sans être physiquement ensemble",
+      "keywords": ["disputes", "conflits", "désaccords", "tension"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_062",
+      "title": "Non-dits et ressentiments",
+      "category": "Conflits & Résilience",
+      "description": "Ce que vous gardez pour vous au lieu de l'exprimer",
+      "keywords": ["non-dits", "silence", "ressentiment", "rétention"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_063",
+      "title": "Gestion de la colère",
+      "category": "Conflits & Résilience",
+      "description": "Comment vous exprimez et gérez la colère",
+      "keywords": ["colère", "frustration", "expression", "contrôle"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_064",
+      "title": "Pardon et réconciliation",
+      "category": "Conflits & Résilience",
+      "description": "Votre capacité à pardonner et à vous réconcilier",
+      "keywords": ["pardon", "réconciliation", "guérison", "oubli"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_065",
+      "title": "Frustration accumulée",
+      "category": "Conflits & Résilience",
+      "description": "Détecter et gérer les frustrations qui s'accumulent",
+      "keywords": ["frustration", "accumulation", "explosion", "patience"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_066",
+      "title": "Reconnexion après conflit",
+      "category": "Conflits & Résilience",
+      "description": "Comment vous vous retrouvez après un désaccord",
+      "keywords": ["reconnexion", "réparation", "rapprochement", "guérison"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_067",
+      "title": "Compromis et négociation",
+      "category": "Conflits & Résilience",
+      "description": "Votre capacité à trouver un terrain d'entente",
+      "keywords": ["compromis", "négociation", "flexibilité", "accord"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_068",
+      "title": "Triggers émotionnels",
+      "category": "Conflits & Résilience",
+      "description": "Identifier ce qui déclenche vos réactions fortes",
+      "keywords": ["triggers", "déclencheurs", "sensibilité", "réaction"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_069",
+      "title": "Limites et respect",
+      "category": "Conflits & Résilience",
+      "description": "Établir et respecter les limites de chacun",
+      "keywords": ["limites", "frontières", "respect", "espace"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_070",
+      "title": "Cycles de conflit",
+      "category": "Conflits & Résilience",
+      "description": "Reconnaître vos patterns de conflits répétitifs",
+      "keywords": ["cycles", "patterns", "répétition", "boucle"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_071",
+      "title": "Communication en crise",
+      "category": "Conflits & Résilience",
+      "description": "Comment vous communiquez dans les moments difficiles",
+      "keywords": ["crise", "urgence", "communication", "stress"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_072",
+      "title": "Ruptures et réconciliations",
+      "category": "Conflits & Résilience",
+      "description": "Votre historique de séparations temporaires",
+      "keywords": ["rupture", "séparation", "réconciliation", "on-off"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_073",
+      "title": "Doutes sur la relation",
+      "category": "Conflits & Résilience",
+      "description": "Gérer les moments de remise en question",
+      "keywords": ["doutes", "incertitude", "questionnement", "hésitation"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_074",
+      "title": "Forces et faiblesses du couple",
+      "category": "Conflits & Résilience",
+      "description": "Identifier vos points forts et vulnérabilités",
+      "keywords": ["forces", "faiblesses", "points", "conscience"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_075",
+      "title": "Espoir et persévérance",
+      "category": "Conflits & Résilience",
+      "description": "Ce qui vous fait continuer malgré les difficultés",
+      "keywords": ["espoir", "persévérance", "motivation", "foi"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_076",
+      "title": "Qui est le plus... ?",
+      "category": "Fun & Légèreté",
+      "description": "Quiz léger pour découvrir qui est le plus [adjectif]",
+      "keywords": ["fun", "jeu", "comparaison", "humour"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_077",
+      "title": "Scénarios imaginaires",
+      "category": "Fun & Légèreté",
+      "description": "Que feriez-vous si... ? Situations amusantes",
+      "keywords": ["imagination", "scénarios", "hypothèses", "fun"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_078",
+      "title": "Défis à distance",
+      "category": "Fun & Légèreté",
+      "description": "Petits challenges ludiques à relever ensemble",
+      "keywords": ["défis", "challenges", "jeux", "compétition"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_079",
+      "title": "Souvenirs communs",
+      "category": "Fun & Légèreté",
+      "description": "Testez votre mémoire sur vos moments partagés",
+      "keywords": ["souvenirs", "mémoire", "passé", "nostalgie"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_080",
+      "title": "Jeux de projection",
+      "category": "Fun & Légèreté",
+      "description": "Imaginez votre futur ensemble de façon ludique",
+      "keywords": ["futur", "projection", "imagination", "rêves"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_081",
+      "title": "Préférences et goûts",
+      "category": "Fun & Légèreté",
+      "description": "Connaissez-vous vraiment les préférences de l'autre ?",
+      "keywords": ["préférences", "goûts", "connaissance", "test"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_082",
+      "title": "Playlist de couple",
+      "category": "Fun & Légèreté",
+      "description": "Vos chansons et leur signification",
+      "keywords": ["musique", "chansons", "playlist", "symbolique"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_083",
+      "title": "Langue de couple",
+      "category": "Fun & Légèreté",
+      "description": "Vos surnoms, blagues internes et codes",
+      "keywords": ["langage", "codes", "surnoms", "intimité"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_084",
+      "title": "Voyages de rêve",
+      "category": "Fun & Légèreté",
+      "description": "Où aimeriez-vous voyager ensemble ?",
+      "keywords": ["voyages", "destinations", "rêves", "aventure"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_085",
+      "title": "Traditions de couple",
+      "category": "Fun & Légèreté",
+      "description": "Les petites traditions qui vous sont propres",
+      "keywords": ["traditions", "rituels", "habitudes", "unique"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_086",
+      "title": "Quiz culture générale duo",
+      "category": "Fun & Légèreté",
+      "description": "Testez vos connaissances ensemble",
+      "keywords": ["culture", "quiz", "connaissance", "jeu"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_087",
+      "title": "Bucket list de couple",
+      "category": "Fun & Légèreté",
+      "description": "Ce que vous voulez absolument faire ensemble",
+      "keywords": ["bucket list", "objectifs", "rêves", "liste"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_088",
+      "title": "Films et séries ensemble",
+      "category": "Fun & Légèreté",
+      "description": "Vos goûts cinématographiques et moments partagés",
+      "keywords": ["films", "séries", "regarder", "partage"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_089",
+      "title": "Nourriture et cuisine",
+      "category": "Fun & Légèreté",
+      "description": "Vos goûts culinaires et rêves de repas ensemble",
+      "keywords": ["nourriture", "cuisine", "repas", "gastronomie"],
+      "premium_level": "solo",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_090",
+      "title": "Photos et selfies",
+      "category": "Fun & Légèreté",
+      "description": "Vos habitudes photo et souvenirs visuels",
+      "keywords": ["photos", "selfies", "images", "capture"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_091",
+      "title": "Votre relation en ce moment",
+      "category": "Thèmes Vagues",
+      "description": "État actuel de votre relation sans question précise",
+      "keywords": ["présent", "état", "ressenti", "global"],
+      "premium_level": "free",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_092",
+      "title": "Ce que vous ressentez sans le dire",
+      "category": "Thèmes Vagues",
+      "description": "Explorer les émotions non exprimées",
+      "keywords": ["non-dit", "ressenti", "caché", "profond"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_093",
+      "title": "Votre équilibre à distance",
+      "category": "Thèmes Vagues",
+      "description": "L'harmonie générale de votre relation",
+      "keywords": ["équilibre", "harmonie", "stabilité", "global"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_094",
+      "title": "Ce qui vous rapproche malgré tout",
+      "category": "Thèmes Vagues",
+      "description": "Les forces invisibles de votre connexion",
+      "keywords": ["connexion", "lien", "proximité", "force"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_095",
+      "title": "Ce qui pourrait vous éloigner",
+      "category": "Thèmes Vagues",
+      "description": "Les menaces potentielles à votre relation",
+      "keywords": ["risques", "dangers", "menaces", "éloignement"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_096",
+      "title": "L'essence de votre amour",
+      "category": "Thèmes Vagues",
+      "description": "La nature profonde de vos sentiments",
+      "keywords": ["essence", "nature", "amour", "profondeur"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_097",
+      "title": "Vos besoins non comblés",
+      "category": "Thèmes Vagues",
+      "description": "Exploration ouverte de ce qui manque",
+      "keywords": ["besoins", "manques", "vide", "attentes"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_098",
+      "title": "Vos forces cachées",
+      "category": "Thèmes Vagues",
+      "description": "Les atouts invisibles de votre couple",
+      "keywords": ["forces", "atouts", "ressources", "potentiel"],
+      "premium_level": "couple",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_099",
+      "title": "Votre histoire unique",
+      "category": "Thèmes Vagues",
+      "description": "Ce qui rend votre relation spéciale",
+      "keywords": ["histoire", "unique", "spécial", "singularité"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    },
+    {
+      "id": "theme_100",
+      "title": "L'avenir que vous créez",
+      "category": "Thèmes Vagues",
+      "description": "Vision floue mais inspirante de votre futur",
+      "keywords": ["futur", "création", "devenir", "évolution"],
+      "premium_level": "elite",
+      "quiz_count": 1
+    }
+  ],
+  "categories_distribution": {
+    "Communication": 15,
+    "Intimité & Émotions": 15,
+    "Psychologie": 15,
+    "Distance & Organisation": 15,
+    "Conflits & Résilience": 15,
+    "Fun & Légèreté": 15,
+    "Thèmes Vagues": 10
+  },
+  "premium_distribution": {
+    "free": 15,
+    "solo": 20,
+    "couple": 35,
+    "elite": 30
+  }
+}

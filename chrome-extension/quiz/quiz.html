@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Couples à Distance</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="logo">💕 Quiz Couples</h1>
+          <div class="header-actions">
+            <span class="subscription-badge" id="subscriptionBadge">Free</span>
+            <button class="btn btn-icon" id="settingsBtn">⚙️</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+
+        <!-- Home View -->
+        <div id="homeView" class="view active">
+          <!-- Stats Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">📊</div>
+              <div class="stat-content">
+                <p class="stat-label">Quiz complétés</p>
+                <p class="stat-value" id="statsCompleted">0</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎯</div>
+              <div class="stat-content">
+                <p class="stat-label">Score moyen</p>
+                <p class="stat-value" id="statsAverage">-</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🔥</div>
+              <div class="stat-content">
+                <p class="stat-label">Série en cours</p>
+                <p class="stat-value" id="statsStreak">0</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <section class="section">
+            <h2 class="section-title">Catégories</h2>
+            <div class="categories-grid" id="categoriesGrid">
+              <!-- Categories will be populated by JS -->
+            </div>
+          </section>
+
+          <!-- Quiz Grid -->
+          <section class="section">
+            <div class="section-header">
+              <h2 class="section-title">Tous les Quiz</h2>
+              <div class="filters">
+                <select id="categoryFilter" class="filter-select">
+                  <option value="all">Toutes les catégories</option>
+                </select>
+                <select id="difficultyFilter" class="filter-select">
+                  <option value="all">Toutes les difficultés</option>
+                  <option value="easy">Facile</option>
+                  <option value="medium">Moyen</option>
+                  <option value="hard">Difficile</option>
+                </select>
+              </div>
+            </div>
+            <div class="quiz-grid" id="quizGrid">
+              <!-- Quiz cards will be populated by JS -->
+            </div>
+          </section>
+        </div>
+
+        <!-- Quiz Taking View -->
+        <div id="quizView" class="view">
+          <button class="btn btn-back" id="backBtn">← Retour</button>
+
+          <div class="quiz-header">
+            <h2 class="quiz-title" id="quizTitle"></h2>
+            <p class="quiz-description" id="quizDescription"></p>
+            <div class="quiz-meta">
+              <span class="quiz-meta-item" id="quizTime"></span>
+              <span class="quiz-meta-item" id="quizDifficulty"></span>
+            </div>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p class="progress-text" id="progressText">Question 1 sur 10</p>
+
+          <div class="question-container" id="questionContainer">
+            <!-- Questions will be populated by JS -->
+          </div>
+
+          <div class="quiz-navigation">
+            <button class="btn btn-secondary" id="prevBtn" disabled>Précédent</button>
+            <button class="btn btn-primary" id="nextBtn">Suivant</button>
+          </div>
+        </div>
+
+        <!-- Results View -->
+        <div id="resultsView" class="view">
+          <button class="btn btn-back" id="resultsBackBtn">← Retour</button>
+
+          <div class="results-container">
+            <div class="results-header">
+              <div class="results-icon" id="resultsIcon">🌟</div>
+              <h2 class="results-title" id="resultsTitle">Excellent !</h2>
+              <p class="results-subtitle" id="resultsSubtitle"></p>
+              <div class="total-score">
+                <div class="score-circle">
+                  <svg width="150" height="150">
+                    <circle class="score-bg" cx="75" cy="75" r="65"></circle>
+                    <circle class="score-progress" id="scoreCircle" cx="75" cy="75" r="65"></circle>
+                  </svg>
+                  <div class="score-number" id="scoreNumber">85</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dimensions-grid" id="dimensionsGrid">
+              <!-- Dimensions will be populated by JS -->
+            </div>
+
+            <div class="insights-section">
+              <h3 class="section-title">💡 Insights</h3>
+              <div id="insightsContainer"></div>
+            </div>
+
+            <div class="recommendations-section">
+              <h3 class="section-title">📝 Recommandations</h3>
+              <div id="recommendationsContainer"></div>
+            </div>
+
+            <div class="results-actions">
+              <button class="btn btn-primary" id="shareBtn">Partager</button>
+              <button class="btn btn-secondary" id="exportBtn">Exporter</button>
+              <button class="btn btn-secondary" id="retakeBtn">Refaire le quiz</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- History View -->
+        <div id="historyView" class="view">
+          <h2 class="section-title">📜 Historique</h2>
+          <div id="historyContainer">
+            <!-- History will be populated by JS -->
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-nav">
+          <button class="nav-btn active" data-view="home">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Accueil</span>
+          </button>
+          <button class="nav-btn" data-view="history">
+            <span class="nav-icon">📊</span>
+            <span class="nav-label">Historique</span>
+          </button>
+          <button class="nav-btn" id="upgradeBtn">
+            <span class="nav-icon">⭐</span>
+            <span class="nav-label">Upgrade</span>
+          </button>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Lock Modal (for locked quizzes) -->
+    <div id="lockModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>🔒 Quiz Verrouillé</h3>
+          <button class="modal-close" id="closeLockModal">×</button>
+        </div>
+        <div class="modal-body">
+          <p id="lockMessage"></p>
+          <button class="btn btn-primary" id="upgradeFromModal">Passer à Premium</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./data/themes.json" type="application/json" id="themesData"></script>
+  <script src="./data/quizzes.json" type="application/json" id="quizzesData"></script>
+  <script src="subscription.js"></script>
+  <script src="scoring.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

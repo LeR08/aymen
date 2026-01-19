@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quiz Schema for Couples à Distance",
+  "description": "Schéma de données pour les quiz de couples à distance - Contenu statique généré par IA",
+
+  "definitions": {
+    "Question": {
+      "type": "object",
+      "required": ["id", "text", "type", "answers", "dimension"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifiant unique de la question (ex: q1, q2...)"
+        },
+        "text": {
+          "type": "string",
+          "description": "Texte de la question"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["multiple_choice", "scale", "comparison"],
+          "description": "Type de réponse attendue"
+        },
+        "answers": {
+          "type": "array",
+          "description": "Liste des réponses possibles",
+          "items": {
+            "oneOf": [
+              {"type": "string"},
+              {
+                "type": "object",
+                "properties": {
+                  "text": {"type": "string"},
+                  "value": {"type": "number"},
+                  "dimension_score": {
+                    "type": "object",
+                    "description": "Score par dimension (ex: trust: 5, intimacy: -2)"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "dimension": {
+          "type": "string",
+          "enum": [
+            "emotional_security",
+            "communication",
+            "trust",
+            "intimacy",
+            "independence",
+            "conflict_resolution",
+            "future_planning",
+            "fun_connection"
+          ],
+          "description": "Dimension psychologique évaluée"
+        },
+        "partner_comparison": {
+          "type": "boolean",
+          "description": "Si true, les deux partenaires doivent répondre et les réponses sont comparées"
+        }
+      }
+    },
+
+    "Quiz": {
+      "type": "object",
+      "required": ["id", "title", "description", "category", "theme_type", "questions", "premium_level"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifiant unique du quiz (ex: quiz_communication_distance)"
+        },
+        "title": {
+          "type": "string",
+          "description": "Titre du quiz"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description courte du quiz"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Communication",
+            "Intimité & Émotions",
+            "Psychologie",
+            "Distance & Organisation",
+            "Conflits & Résilience",
+            "Fun & Légèreté",
+            "Thèmes Vagues"
+          ],
+          "description": "Catégorie du quiz"
+        },
+        "theme_type": {
+          "type": "string",
+          "enum": ["precise", "vague", "fun"],
+          "description": "Type de thème (précis, vague/exploratoire, fun)"
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 15,
+          "items": {"$ref": "#/definitions/Question"}
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": ["easy", "medium", "hard"],
+          "description": "Niveau de difficulté / profondeur émotionnelle"
+        },
+        "tags": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Tags pour la recherche et le filtrage"
+        },
+        "premium_level": {
+          "type": "string",
+          "enum": ["free", "solo", "couple", "elite", "custom"],
+          "description": "Niveau d'abonnement requis pour accéder au quiz"
+        },
+        "estimated_time": {
+          "type": "number",
+          "description": "Temps estimé en minutes pour compléter le quiz"
+        },
+        "scoring_method": {
+          "type": "string",
+          "enum": ["dimension_based", "compatibility", "insight", "fun"],
+          "description": "Méthode de calcul du score/résultat"
+        }
+      }
+    },
+
+    "Theme": {
+      "type": "object",
+      "required": ["id", "title", "category", "description", "premium_level"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Identifiant unique du thème"
+        },
+        "title": {
+          "type": "string",
+          "description": "Titre du thème"
+        },
+        "category": {
+          "type": "string",
+          "description": "Catégorie du thème"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description du thème"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Mots-clés associés au thème"
+        },
+        "premium_level": {
+          "type": "string",
+          "enum": ["free", "solo", "couple", "elite"],
+          "description": "Niveau d'abonnement requis"
+        },
+        "quiz_count": {
+          "type": "number",
+          "description": "Nombre de quiz disponibles pour ce thème"
+        }
+      }
+    },
+
+    "SubscriptionLevel": {
+      "type": "object",
+      "properties": {
+        "free": {
+          "type": "object",
+          "properties": {
+            "access": {
+              "type": "array",
+              "items": {"type": "string"},
+              "default": ["Thèmes vagues", "Quiz fun", "Max 3 quiz/mois"]
+            },
+            "quiz_limit": {"type": "number", "default": 3},
+            "features": {
+              "type": "array",
+              "default": ["Accès limité", "Résultats basiques"]
+            }
+          }
+        },
+        "solo": {
+          "type": "object",
+          "properties": {
+            "access": {
+              "type": "array",
+              "default": ["Thèmes précis", "Tous les quiz", "Illimité"]
+            },
+            "features": {
+              "type": "array",
+              "default": ["Résultats détaillés", "Historique personnel", "Insights psychologiques"]
+            }
+          }
+        },
+        "couple": {
+          "type": "object",
+          "properties": {
+            "access": {
+              "type": "array",
+              "default": ["Quiz synchronisés", "Comparaisons partenaires", "Thèmes de couple"]
+            },
+            "features": {
+              "type": "array",
+              "default": ["Mode duo", "Analyse de compatibilité", "Suggestions personnalisées"]
+            }
+          }
+        },
+        "elite": {
+          "type": "object",
+          "properties": {
+            "access": {
+              "type": "array",
+              "default": ["Quiz profonds exclusifs", "Création de quiz personnalisés", "Tout inclus"]
+            },
+            "features": {
+              "type": "array",
+              "default": ["Créateur de quiz perso", "Support prioritaire", "Analyses avancées", "Exportation données"]
+            }
+          }
+        }
+      }
+    }
+  }
+}
