@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Démo - Quiz Couples à Distance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 600;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .badge-free { background: #e0e7ff; color: #4c51bf; }
+    .badge-solo { background: #fef3c7; color: #92400e; }
+    .badge-couple { background: #fce7f3; color: #9f1239; }
+    .badge-elite { background: #fef3c7; color: #92400e; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+    }
+
+    .stats {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .stats h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px;
+      background: #f8fafc;
+      border-radius: 10px;
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .quiz-preview {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 15px;
+    }
+
+    .quiz-title {
+      font-size: 1.3em;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .quiz-meta {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-size: 0.85em;
+      color: #666;
+      background: #f1f5f9;
+      padding: 4px 10px;
+      border-radius: 5px;
+    }
+
+    .demo-section {
+      margin-bottom: 40px;
+    }
+
+    .demo-section h2 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .code-block {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+
+    .dimensions-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .dimension-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .dimension-icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .dimension-name {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .dimension-desc {
+      font-size: 0.85em;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>💕 Quiz Couples à Distance</h1>
+      <p>Démo du Système Complet - 100% Sans IA en Production</p>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats">
+      <h2>📊 Statistiques du Système</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">100</div>
+          <div class="stat-label">Thèmes Générés</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Quiz Fonctionnels</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Dimensions Psychologiques</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Catégories</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Niveaux d'Abonnement</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">0€</div>
+          <div class="stat-label">Coût IA en Production</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="demo-section">
+      <h2>✨ Fonctionnalités Implémentées</h2>
+      <div class="demo-grid">
+        <div class="card">
+          <h2>📚 100 Thèmes</h2>
+          <p>Thèmes couvrant tous les aspects des relations à distance :</p>
+          <span class="badge badge-free">Communication (15)</span>
+          <span class="badge badge-solo">Intimité (15)</span>
+          <span class="badge badge-couple">Psychologie (15)</span>
+          <span class="badge badge-elite">Organisation (15)</span>
+          <span class="badge badge-free">Conflits (15)</span>
+          <span class="badge badge-solo">Fun (15)</span>
+          <span class="badge badge-couple">Vagues (10)</span>
+        </div>
+
+        <div class="card">
+          <h2>🎯 Quiz Complets</h2>
+          <p>7 quiz fonctionnels avec 10-15 questions chacun :</p>
+          <ul style="list-style: none; padding-left: 0;">
+            <li>✅ Communication asynchrone</li>
+            <li>✅ Jalousie à distance</li>
+            <li>✅ Qui est le plus... ?</li>
+            <li>✅ Langages de l'amour</li>
+            <li>✅ Fuseaux horaires</li>
+            <li>✅ Disputes</li>
+            <li>✅ Souvenirs communs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>💎 Système d'Abonnement</h2>
+          <p>4 niveaux d'accès avec fonctionnalités progressives :</p>
+          <span class="badge badge-free">Free - 3 quiz/mois</span>
+          <span class="badge badge-solo">Solo - Illimité</span>
+          <span class="badge badge-couple">Couple - Comparaison</span>
+          <span class="badge badge-elite">Elite - Création perso</span>
+        </div>
+
+        <div class="card">
+          <h2>📊 Système de Scoring</h2>
+          <p>Analyse intelligente sur 8 dimensions psychologiques avec insights et recommandations personnalisées.</p>
+          <button class="btn" onclick="showDimensions()">Voir les Dimensions</button>
+        </div>
+
+        <div class="card">
+          <h2>🎨 Interface UI</h2>
+          <p>Interface moderne et responsive avec navigation intuitive, modales, et affichage des résultats.</p>
+          <button class="btn" onclick="alert('Interface HTML créée dans quiz.html')">Voir l\'Interface</button>
+        </div>
+
+        <div class="card">
+          <h2>🚀 Architecture</h2>
+          <p><strong>100% Statique</strong> - Données JSON générées en amont par IA, aucun appel IA en production.</p>
+          <button class="btn" onclick="showArchitecture()">Voir l\'Architecture</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dimensions Section -->
+    <div id="dimensionsSection" style="display: none;">
+      <div class="demo-section">
+        <h2>🧠 8 Dimensions Psychologiques</h2>
+        <div class="card">
+          <div class="dimensions-preview">
+            <div class="dimension-card">
+              <div class="dimension-icon">🛡️</div>
+              <div class="dimension-name">Sécurité Émotionnelle</div>
+              <div class="dimension-desc">Sentiment de stabilité dans la relation</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">💬</div>
+              <div class="dimension-name">Communication</div>
+              <div class="dimension-desc">Qualité et efficacité des échanges</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">🤝</div>
+              <div class="dimension-name">Confiance</div>
+              <div class="dimension-desc">Niveau de confiance mutuelle</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">❤️</div>
+              <div class="dimension-name">Intimité</div>
+              <div class="dimension-desc">Connexion profonde émotionnelle</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">🦅</div>
+              <div class="dimension-name">Indépendance</div>
+              <div class="dimension-desc">Équilibre autonomie/relation</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">🤹</div>
+              <div class="dimension-name">Résolution de Conflits</div>
+              <div class="dimension-desc">Capacité à gérer les désaccords</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">🗺️</div>
+              <div class="dimension-name">Planification du Futur</div>
+              <div class="dimension-desc">Vision commune de l'avenir</div>
+            </div>
+            <div class="dimension-card">
+              <div class="dimension-icon">🎉</div>
+              <div class="dimension-name">Connexion Ludique</div>
+              <div class="dimension-desc">Complicité et moments légers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz Previews Section -->
+    <div class="demo-section">
+      <h2>📝 Exemples de Quiz</h2>
+
+      <div class="quiz-preview">
+        <div class="quiz-header">
+          <div>
+            <div class="quiz-title">Communication asynchrone</div>
+            <div class="quiz-meta">
+              <span class="meta-item">⏱️ 5 minutes</span>
+              <span class="meta-item">📊 10 questions</span>
+              <span class="meta-item">🆓 Free</span>
+              <span class="meta-item">📱 Communication</span>
+            </div>
+          </div>
+          <span class="badge badge-free">Facile</span>
+        </div>
+        <p style="color: #666; margin: 15px 0;">Comprendre comment vous gérez les messages différés et les délais de réponse</p>
+        <button class="btn">Commencer le Quiz</button>
+      </div>
+
+      <div class="quiz-preview">
+        <div class="quiz-header">
+          <div>
+            <div class="quiz-title">Jalousie à distance</div>
+            <div class="quiz-meta">
+              <span class="meta-item">⏱️ 8 minutes</span>
+              <span class="meta-item">📊 12 questions</span>
+              <span class="meta-item">💑 Couple</span>
+              <span class="meta-item">❤️ Intimité & Émotions</span>
+            </div>
+          </div>
+          <span class="badge badge-couple">Moyen</span>
+        </div>
+        <p style="color: #666; margin: 15px 0;">Gérer les sentiments de jalousie quand on est loin</p>
+        <button class="btn">Commencer le Quiz</button>
+      </div>
+
+      <div class="quiz-preview">
+        <div class="quiz-header">
+          <div>
+            <div class="quiz-title">Qui est le plus... ?</div>
+            <div class="quiz-meta">
+              <span class="meta-item">⏱️ 5 minutes</span>
+              <span class="meta-item">📊 12 questions</span>
+              <span class="meta-item">🆓 Free</span>
+              <span class="meta-item">🎉 Fun & Légèreté</span>
+            </div>
+          </div>
+          <span class="badge badge-free">Facile</span>
+        </div>
+        <p style="color: #666; margin: 15px 0;">Quiz léger pour découvrir qui est le plus [adjectif]</p>
+        <button class="btn">Commencer le Quiz</button>
+      </div>
+    </div>
+
+    <!-- Architecture Section -->
+    <div id="architectureSection" style="display: none;">
+      <div class="demo-section">
+        <h2>🏗️ Architecture du Système</h2>
+        <div class="card">
+          <h2>Fichiers Créés</h2>
+          <div class="code-block">
+chrome-extension/quiz/
+├── data/
+│   ├── schema.json          # Schéma de données complet
+│   ├── themes.json          # 100 thèmes organisés
+│   └── quizzes.json         # 7 quiz avec questions (2585 lignes)
+├── subscription.js          # Système d'abonnement (8379 octets)
+├── scoring.js               # Système de scoring (13757 octets)
+├── quiz.html                # Interface principale
+├── generate_quizzes.py      # Script de génération
+└── demo.html                # Cette démo
+          </div>
+
+          <h2 style="margin-top: 30px;">Principe Fondamental</h2>
+          <p>✅ L'IA est utilisée <strong>AVANT</strong> le déploiement</p>
+          <p>✅ L'application consomme uniquement des <strong>données statiques</strong></p>
+          <p>✅ <strong>Aucun appel IA</strong> en production</p>
+          <p>✅ <strong>Zéro coût</strong> IA récurrent</p>
+          <p>✅ Application <strong>rapide et stable</strong></p>
+
+          <h2 style="margin-top: 30px;">Flow de Données</h2>
+          <div class="code-block">
+1. 🤖 IA génère thèmes et quiz (une fois)
+      ↓
+2. 💾 Sauvegarde en JSON statique
+      ↓
+3. 📱 Application charge les données
+      ↓
+4. 👤 Utilisateur répond aux questions
+      ↓
+5. 📊 Calcul local des scores
+      ↓
+6. 💡 Affichage des insights (données précalculées)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- API Examples Section -->
+    <div class="demo-section">
+      <h2>💻 Exemples d'Utilisation</h2>
+      <div class="card">
+        <h2>Charger et filtrer les quiz</h2>
+        <div class="code-block">
+// Charger les quiz
+const response = await fetch('./data/quizzes.json');
+const data = await response.json();
+
+// Filtrer par niveau d'abonnement
+const subscriptionMgr = new SubscriptionManager();
+const accessibleQuizzes = subscriptionMgr.filterAccessibleQuizzes(data.quizzes);
+
+// Filtrer par catégorie
+const communicationQuizzes = data.quizzes.filter(q =>
+  q.category === 'Communication'
+);
+        </div>
+
+        <h2 style="margin-top: 30px;">Calculer les scores</h2>
+        <div class="code-block">
+// Créer un scorer
+const quiz = data.quizzes[0]; // Premier quiz
+const answers = {
+  q1: 5,
+  q2: 4,
+  q3: 3,
+  // ...
+};
+
+const scorer = new QuizScorer(quiz, answers);
+const results = scorer.getSummary();
+
+console.log(results.totalScore);        // Score global
+console.log(results.dimensions);         // Scores par dimension
+console.log(results.insights);           // Insights générés
+console.log(results.recommendations);    // Recommandations
+        </div>
+
+        <h2 style="margin-top: 30px;">Vérifier l'accès</h2>
+        <div class="code-block">
+const subscriptionMgr = new SubscriptionManager();
+
+// Vérifier si un quiz est accessible
+const access = subscriptionMgr.canAccessQuiz(quiz);
+if (access.allowed) {
+  // Lancer le quiz
+} else {
+  // Afficher message de verrouillage
+  alert(access.reason);
+}
+
+// Vérifier les fonctionnalités
+const canCreateCustom = subscriptionMgr.canCreateCustomQuiz();
+const canCompare = subscriptionMgr.canCompareWithPartner();
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="demo-section">
+      <h2>🚀 Prochaines Étapes</h2>
+      <div class="demo-grid">
+        <div class="card">
+          <h2>CSS Complet</h2>
+          <p>Finaliser le fichier quiz.css avec tous les styles pour l'interface.</p>
+          <span class="badge badge-solo">En attente</span>
+        </div>
+        <div class="card">
+          <h2>JavaScript Interactif</h2>
+          <p>Ajouter quiz.js pour gérer la navigation et l'interactivité.</p>
+          <span class="badge badge-solo">En attente</span>
+        </div>
+        <div class="card">
+          <h2>Créateur de Quiz</h2>
+          <p>Interface pour les utilisateurs Elite de créer des quiz personnalisés.</p>
+          <span class="badge badge-elite">En attente</span>
+        </div>
+        <div class="card">
+          <h2>Plus de Quiz</h2>
+          <p>Générer 13 quiz supplémentaires pour atteindre 20 quiz.</p>
+          <span class="badge badge-couple">En attente</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function showDimensions() {
+      const section = document.getElementById('dimensionsSection');
+      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+      if (section.style.display === 'block') {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function showArchitecture() {
+      const section = document.getElementById('architectureSection');
+      section.style.display = section.style.display === 'none' ? 'block' : 'none';
+      if (section.style.display === 'block') {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Animation au chargement
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card, .quiz-preview');
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'all 0.5s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+    });
+  </script>
+</body>
+</html>
